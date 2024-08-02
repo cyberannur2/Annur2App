@@ -44,6 +44,7 @@
 
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:elevation="0dp"
@@ -78,8 +79,8 @@
     <!--    Mulai Item-->
     <ImageView
         android:id="@+id/logo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="225dp"
+        android:layout_height="32dp"
         android:layout_marginTop="24dp"
         android:elevation="2dp"
         android:src="@drawable/logo1"
@@ -112,12 +113,62 @@
         app:layout_constraintTop_toBottomOf="@id/view_bacaan" />
 
     <!--    Banner-->
-    <androidx.fragment.app.FragmentContainerView
+<!--    <androidx.fragment.app.FragmentContainerView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="32dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/line1" />-->
+
+<!--    <include-->
+<!--        layout="@layout/fragment_banner"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="32dp"-->
+<!--        android:elevation="4dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/line1"  />-->
+
+<!--    Agenda Terdekat-->
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="32dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:elevation="4dp"
+        android:gravity="center_vertical"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/line1" />
+        app:layout_constraintTop_toBottomOf="@id/line1">
 
+        <View
+            android:id="@+id/line_agenda"
+            android:layout_width="4dp"
+            android:layout_height="16dp"
+            android:background="@drawable/bg_line" />
+        <Space
+            android:layout_width="6dp"
+            android:layout_height="0dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/agenda_terdekat"
+            android:fontFamily="@font/poppins"
+            android:textStyle="bold"
+            android:textSize="14sp"/>
+
+        <Space
+            android:layout_width="220dp"
+            android:layout_height="0dp"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#00000000"
+            android:src="@drawable/ic_right"/>
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
