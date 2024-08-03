@@ -98,7 +98,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/logo">
 
-<!--        <include layout="@layout/bacaan" />-->
+        <!--        <include layout="@layout/bacaan" />-->
     </HorizontalScrollView>
 
     <View
@@ -113,27 +113,28 @@
         app:layout_constraintTop_toBottomOf="@id/view_bacaan" />
 
     <!--    Banner-->
-<!--    <androidx.fragment.app.FragmentContainerView-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginTop="32dp"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@id/line1" />-->
+    <!--    <androidx.fragment.app.FragmentContainerView-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginTop="32dp"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@id/line1" />-->
 
-<!--    <include-->
-<!--        layout="@layout/fragment_banner"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginTop="32dp"-->
-<!--        android:elevation="4dp"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@id/line1"  />-->
+    <!--    <include-->
+    <!--        layout="@layout/fragment_banner"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginTop="32dp"-->
+    <!--        android:elevation="4dp"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@id/line1"  />-->
 
-<!--    Agenda Terdekat-->
+    <!--    Agenda Terdekat-->
 
     <LinearLayout
+        android:id="@+id/layout_agenda"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -148,27 +149,70 @@
             android:layout_width="4dp"
             android:layout_height="16dp"
             android:background="@drawable/bg_line" />
+
         <Space
             android:layout_width="6dp"
-            android:layout_height="0dp"/>
+            android:layout_height="0dp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/agenda_terdekat"
             android:fontFamily="@font/poppins"
-            android:textStyle="bold"
-            android:textSize="14sp"/>
+            android:text="@string/agenda_terdekat"
+            android:textSize="14sp"
+            android:textStyle="bold" />
 
         <Space
             android:layout_width="220dp"
-            android:layout_height="0dp"/>
+            android:layout_height="0dp" />
 
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="#00000000"
-            android:src="@drawable/ic_right"/>
+            android:src="@drawable/ic_right" />
+
+    </LinearLayout>
+
+    <!--    Artikel Terbaru-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="32dp"
+        android:elevation="4dp"
+        android:gravity="center_vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_agenda">
+
+        <View
+            android:id="@+id/line_artikel"
+            android:layout_width="4dp"
+            android:layout_height="16dp"
+            android:background="@drawable/bg_line" />
+
+        <Space
+            android:layout_width="6dp"
+            android:layout_height="0dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:text="@string/artikel_terbaru"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <Space
+            android:layout_width="220dp"
+            android:layout_height="0dp" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#00000000"
+            android:src="@drawable/ic_right" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

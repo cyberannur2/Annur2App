@@ -7,6 +7,8 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/item_agenda"
+        tools:itemCount="4" />
 
 </FrameLayout>
