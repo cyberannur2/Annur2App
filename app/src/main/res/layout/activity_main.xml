@@ -177,6 +177,7 @@
     <!--    Artikel Terbaru-->
 
     <LinearLayout
+        android:id="@+id/layout_artikel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -201,6 +202,48 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins"
             android:text="@string/artikel_terbaru"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <Space
+            android:layout_width="220dp"
+            android:layout_height="0dp" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#00000000"
+            android:src="@drawable/ic_right" />
+
+    </LinearLayout>
+
+<!--    Quote-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="32dp"
+        android:elevation="4dp"
+        android:gravity="center_vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_artikel">
+
+        <View
+            android:id="@+id/line_quote"
+            android:layout_width="4dp"
+            android:layout_height="16dp"
+            android:background="@drawable/bg_line" />
+
+        <Space
+            android:layout_width="6dp"
+            android:layout_height="0dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:text="Quotes"
             android:textSize="14sp"
             android:textStyle="bold" />
 
