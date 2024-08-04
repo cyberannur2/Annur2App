@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -61,7 +60,7 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="-10dp"
+                android:scaleType="centerCrop"
                 android:src="@drawable/bg1" />
         </androidx.cardview.widget.CardView>
 
@@ -70,7 +69,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.47" />
+            app:layout_constraintGuide_begin="434dp" />
 
         <View
             android:layout_width="match_parent"
@@ -119,23 +118,7 @@
             app:layout_constraintTop_toBottomOf="@id/view_bacaan" />
 
         <!--    Banner-->
-        <!--    <androidx.fragment.app.FragmentContainerView-->
-        <!--        android:layout_width="match_parent"-->
-        <!--        android:layout_height="wrap_content"-->
-        <!--        android:layout_marginTop="32dp"-->
-        <!--        app:layout_constraintEnd_toEndOf="parent"-->
-        <!--        app:layout_constraintStart_toStartOf="parent"-->
-        <!--        app:layout_constraintTop_toBottomOf="@id/line1" />-->
 
-        <!--    <include-->
-        <!--        layout="@layout/fragment_banner"-->
-        <!--        android:layout_width="wrap_content"-->
-        <!--        android:layout_height="wrap_content"-->
-        <!--        android:layout_marginTop="32dp"-->
-        <!--        android:elevation="4dp"-->
-        <!--        app:layout_constraintEnd_toEndOf="parent"-->
-        <!--        app:layout_constraintStart_toStartOf="parent"-->
-        <!--        app:layout_constraintTop_toBottomOf="@id/line1"  />-->
 
         <!--    Agenda Terdekat-->
 
@@ -163,7 +146,7 @@
                 android:layout_height="0dp" />
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins"
                 android:text="@string/agenda_terdekat"
@@ -171,7 +154,7 @@
                 android:textStyle="bold" />
 
             <Space
-                android:layout_width="220dp"
+                android:layout_width="120dp"
                 android:layout_height="0dp" />
 
             <ImageButton
@@ -209,7 +192,7 @@
                 android:layout_height="0dp" />
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins"
                 android:text="@string/artikel_terbaru"
@@ -217,7 +200,7 @@
                 android:textStyle="bold" />
 
             <Space
-                android:layout_width="220dp"
+                android:layout_width="120dp"
                 android:layout_height="0dp" />
 
             <ImageButton
@@ -234,12 +217,11 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:elevation="2dp"
-            android:foregroundGravity=""
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/layout_artikel">
 
-            <include layout="@layout/fragment_artikel" />
+            <!--            <include layout="@layout/fragment_artikel" />-->
         </HorizontalScrollView>
 
         <!--    Quote-->
@@ -250,8 +232,10 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="32dp"
+            android:layout_marginEnd="20dp"
             android:elevation="4dp"
             android:gravity="center_vertical"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/layout_artikel">
 
@@ -266,7 +250,7 @@
                 android:layout_height="0dp" />
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins"
                 android:text="Quotes"
@@ -274,7 +258,7 @@
                 android:textStyle="bold" />
 
             <Space
-                android:layout_width="220dp"
+                android:layout_width="120dp"
                 android:layout_height="0dp" />
 
             <ImageButton
@@ -285,22 +269,51 @@
 
         </LinearLayout>
 
-        <HorizontalScrollView
-            android:id="@+id/view_coba"
-            android:layout_width="wrap_content"
+        <!--    Video Terbaru-->
+
+        <LinearLayout
+            android:id="@+id/layout_video"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:elevation="2dp"
-            android:foregroundGravity=""
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="20dp"
+            android:elevation="4dp"
+            android:gravity="center_vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/layout_quote">
 
-            <include layout="@layout/layout_bacaan" />
-        </HorizontalScrollView>
+            <View
+                android:id="@+id/line_video"
+                android:layout_width="4dp"
+                android:layout_height="16dp"
+                android:background="@drawable/bg_line" />
 
+            <Space
+                android:layout_width="6dp"
+                android:layout_height="0dp" />
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:text="Video Terbaru"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <Space
+                android:layout_width="120dp"
+                android:layout_height="0dp" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#00000000"
+                android:src="@drawable/ic_right" />
+
+        </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-
-</ScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
