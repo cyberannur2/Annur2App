@@ -90,15 +90,16 @@
 
     <HorizontalScrollView
         android:id="@+id/view_bacaan"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:elevation="2dp"
+        android:foregroundGravity=""
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/logo">
 
-        <!--        <include layout="@layout/bacaan" />-->
+        <include layout="@layout/layout_bacaan" />
     </HorizontalScrollView>
 
     <View
@@ -258,4 +259,5 @@
             android:src="@drawable/ic_right" />
 
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

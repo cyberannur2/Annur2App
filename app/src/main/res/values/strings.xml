@@ -5,4 +5,12 @@
     <string name="agenda_terdekat">Agenda Terdekat</string>
     <string name="umum">Umum</string>
     <string name="artikel_terbaru">Artikel Terbaru</string>
+    <string name="tawassul">Tawassul</string>
+    <string name="yasin_tahlil"><![CDATA[Yasin & Tahlil]]></string>
+    <string name="al_waqiah">Al-Waqiah</string>
+    <string name="birrul_walidain">Birrul Walidain</string>
+    <string name="isitghosah">Isitghosah</string>
+    <string name="qasidah_burdah">Qasidah Burdah</string>
+    <string name="maulid_diba">Maulid Diba\'</string>
+    <string name="lainnya">Lainnya</string>
 </resources>
