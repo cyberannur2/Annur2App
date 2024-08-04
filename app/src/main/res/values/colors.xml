@@ -7,4 +7,6 @@
     <color name="dark_blue">#09478C</color>
     <color name="light_blue">#90C0FF</color>
     <color name="grey">#5E5E5E</color>
+    <color name="nav_selected">#5E5E5E</color>
+    <color name="nav_unselected">#787878</color>
 </resources>
