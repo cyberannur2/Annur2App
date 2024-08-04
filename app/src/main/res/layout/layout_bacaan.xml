@@ -6,8 +6,8 @@
 
     <ImageView
         android:id="@+id/ic_tawassul"
-        android:layout_width="54dp"
-        android:layout_height="54dp"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
         android:clickable="true"
         android:src="@drawable/ic_tawassul"
         app:layout_constraintEnd_toStartOf="@+id/ic_yasin_tahlil"
@@ -29,8 +29,8 @@
 
     <ImageView
         android:id="@+id/ic_yasin_tahlil"
-        android:layout_width="54dp"
-        android:layout_height="54dp"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
         android:layout_marginStart="24dp"
         android:clickable="true"
         android:src="@drawable/ic_yasin_tahlil"
@@ -52,8 +52,8 @@
 
     <ImageView
         android:id="@+id/ic_waqiah"
-        android:layout_width="54dp"
-        android:layout_height="54dp"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
         android:layout_marginStart="24dp"
         android:clickable="true"
         android:src="@drawable/ic_waqiah"
@@ -75,8 +75,8 @@
 
     <ImageView
         android:id="@+id/ic_birrul_walidain"
-        android:layout_width="54dp"
-        android:layout_height="54dp"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
         android:layout_marginStart="24dp"
         android:clickable="true"
         android:src="@drawable/ic_birrul_walidain"
@@ -98,8 +98,8 @@
 
     <ImageView
         android:id="@+id/ic_istighosah"
-        android:layout_width="54dp"
-        android:layout_height="54dp"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
         android:layout_marginTop="16dp"
         android:clickable="true"
         android:src="@drawable/ic_istighosah"
@@ -121,8 +121,8 @@
 
     <ImageView
         android:id="@+id/ic_burdah"
-        android:layout_width="54dp"
-        android:layout_height="54dp"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
         android:layout_marginStart="24dp"
         android:clickable="true"
         android:src="@drawable/ic_burdah"
@@ -145,8 +145,8 @@
 
     <ImageView
         android:id="@+id/ic_diba"
-        android:layout_width="54dp"
-        android:layout_height="54dp"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
         android:layout_marginStart="24dp"
         android:clickable="true"
         android:src="@drawable/ic_diba"
@@ -169,8 +169,8 @@
 
     <ImageView
         android:id="@+id/ic_lainnya"
-        android:layout_width="54dp"
-        android:layout_height="54dp"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
         android:layout_marginStart="24dp"
         android:clickable="true"
         android:src="@drawable/ic_lainnya"
