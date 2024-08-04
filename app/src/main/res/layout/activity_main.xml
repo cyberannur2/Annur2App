@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -7,261 +8,299 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <View
-        android:id="@+id/view2"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:background="@drawable/bg_gerbang"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="wrap_content">
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:scaleType="centerCrop"
-        app:layout_constraintBottom_toTopOf="@+id/gerbang_guidelane"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/gerbang" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/gerbang_guidelane"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.3" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/top_home_guidelane"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.25" />
-
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:elevation="0dp"
-        app:cardCornerRadius="46dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/top_home_guidelane">
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@drawable/bg_gerbang"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toTopOf="@+id/gerbang_guidelane"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/gerbang" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gerbang_guidelane"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.3" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/top_home_guidelane"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.22" />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="-10dp"
-            android:src="@drawable/bg1" />
-    </androidx.cardview.widget.CardView>
+            android:elevation="0dp"
+            app:cardCornerRadius="46dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/top_home_guidelane">
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/top_home_guidelane2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.57" />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-10dp"
+                android:src="@drawable/bg1" />
+        </androidx.cardview.widget.CardView>
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:background="@drawable/bg_home"
-        android:elevation="2dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/top_home_guidelane2" />
-
-    <!--    Mulai Item-->
-    <ImageView
-        android:id="@+id/logo"
-        android:layout_width="225dp"
-        android:layout_height="32dp"
-        android:layout_marginTop="24dp"
-        android:elevation="2dp"
-        android:src="@drawable/logo1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/top_home_guidelane" />
-
-    <HorizontalScrollView
-        android:id="@+id/view_bacaan"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:elevation="2dp"
-        android:foregroundGravity=""
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/logo">
-
-        <include layout="@layout/layout_bacaan" />
-    </HorizontalScrollView>
-
-    <View
-        android:id="@+id/line1"
-        android:layout_width="140dp"
-        android:layout_height="3dp"
-        android:layout_marginTop="32dp"
-        android:background="@drawable/bg_line1"
-        android:elevation="4dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/view_bacaan" />
-
-    <!--    Banner-->
-    <!--    <androidx.fragment.app.FragmentContainerView-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_marginTop="32dp"-->
-    <!--        app:layout_constraintEnd_toEndOf="parent"-->
-    <!--        app:layout_constraintStart_toStartOf="parent"-->
-    <!--        app:layout_constraintTop_toBottomOf="@id/line1" />-->
-
-    <!--    <include-->
-    <!--        layout="@layout/fragment_banner"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_marginTop="32dp"-->
-    <!--        android:elevation="4dp"-->
-    <!--        app:layout_constraintEnd_toEndOf="parent"-->
-    <!--        app:layout_constraintStart_toStartOf="parent"-->
-    <!--        app:layout_constraintTop_toBottomOf="@id/line1"  />-->
-
-    <!--    Agenda Terdekat-->
-
-    <LinearLayout
-        android:id="@+id/layout_agenda"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="20dp"
-        android:elevation="4dp"
-        android:gravity="center_vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/line1">
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/top_home_guidelane2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.47" />
 
         <View
-            android:id="@+id/line_agenda"
-            android:layout_width="4dp"
-            android:layout_height="16dp"
-            android:background="@drawable/bg_line" />
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@drawable/bg_home"
+            android:elevation="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/top_home_guidelane2" />
 
-        <Space
-            android:layout_width="6dp"
-            android:layout_height="0dp" />
+        <!--    Mulai Item-->
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="225dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="24dp"
+            android:elevation="2dp"
+            android:src="@drawable/logo1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/top_home_guidelane" />
 
-        <TextView
+        <HorizontalScrollView
+            android:id="@+id/view_bacaan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/poppins"
-            android:text="@string/agenda_terdekat"
-            android:textSize="14sp"
-            android:textStyle="bold" />
+            android:layout_marginTop="24dp"
+            android:elevation="2dp"
+            android:foregroundGravity=""
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/logo">
 
-        <Space
-            android:layout_width="220dp"
-            android:layout_height="0dp" />
-
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="#00000000"
-            android:src="@drawable/ic_right" />
-
-    </LinearLayout>
-
-    <!--    Artikel Terbaru-->
-
-    <LinearLayout
-        android:id="@+id/layout_artikel"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="20dp"
-        android:elevation="4dp"
-        android:gravity="center_vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/layout_agenda">
+            <include layout="@layout/layout_bacaan" />
+        </HorizontalScrollView>
 
         <View
-            android:id="@+id/line_artikel"
-            android:layout_width="4dp"
-            android:layout_height="16dp"
-            android:background="@drawable/bg_line" />
+            android:id="@+id/line1"
+            android:layout_width="140dp"
+            android:layout_height="3dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/bg_line1"
+            android:elevation="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view_bacaan" />
 
-        <Space
-            android:layout_width="6dp"
-            android:layout_height="0dp" />
+        <!--    Banner-->
+        <!--    <androidx.fragment.app.FragmentContainerView-->
+        <!--        android:layout_width="match_parent"-->
+        <!--        android:layout_height="wrap_content"-->
+        <!--        android:layout_marginTop="32dp"-->
+        <!--        app:layout_constraintEnd_toEndOf="parent"-->
+        <!--        app:layout_constraintStart_toStartOf="parent"-->
+        <!--        app:layout_constraintTop_toBottomOf="@id/line1" />-->
 
-        <TextView
+        <!--    <include-->
+        <!--        layout="@layout/fragment_banner"-->
+        <!--        android:layout_width="wrap_content"-->
+        <!--        android:layout_height="wrap_content"-->
+        <!--        android:layout_marginTop="32dp"-->
+        <!--        android:elevation="4dp"-->
+        <!--        app:layout_constraintEnd_toEndOf="parent"-->
+        <!--        app:layout_constraintStart_toStartOf="parent"-->
+        <!--        app:layout_constraintTop_toBottomOf="@id/line1"  />-->
+
+        <!--    Agenda Terdekat-->
+
+        <LinearLayout
+            android:id="@+id/layout_agenda"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="20dp"
+            android:elevation="4dp"
+            android:gravity="center_vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/line1">
+
+            <View
+                android:id="@+id/line_agenda"
+                android:layout_width="4dp"
+                android:layout_height="16dp"
+                android:background="@drawable/bg_line" />
+
+            <Space
+                android:layout_width="6dp"
+                android:layout_height="0dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:text="@string/agenda_terdekat"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <Space
+                android:layout_width="220dp"
+                android:layout_height="0dp" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#00000000"
+                android:src="@drawable/ic_right" />
+
+        </LinearLayout>
+
+        <!--    Artikel Terbaru-->
+
+        <LinearLayout
+            android:id="@+id/layout_artikel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="20dp"
+            android:elevation="4dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_agenda">
+
+            <View
+                android:id="@+id/line_artikel"
+                android:layout_width="4dp"
+                android:layout_height="16dp"
+                android:background="@drawable/bg_line" />
+
+            <Space
+                android:layout_width="6dp"
+                android:layout_height="0dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:text="@string/artikel_terbaru"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <Space
+                android:layout_width="220dp"
+                android:layout_height="0dp" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#00000000"
+                android:src="@drawable/ic_right" />
+
+        </LinearLayout>
+
+        <HorizontalScrollView
+            android:id="@+id/view_artikel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/poppins"
-            android:text="@string/artikel_terbaru"
-            android:textSize="14sp"
-            android:textStyle="bold" />
+            android:layout_marginTop="24dp"
+            android:elevation="2dp"
+            android:foregroundGravity=""
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_artikel">
 
-        <Space
-            android:layout_width="220dp"
-            android:layout_height="0dp" />
+            <include layout="@layout/fragment_artikel" />
+        </HorizontalScrollView>
 
-        <ImageButton
+        <!--    Quote-->
+
+        <LinearLayout
+            android:id="@+id/layout_quote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="32dp"
+            android:elevation="4dp"
+            android:gravity="center_vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_artikel">
+
+            <View
+                android:id="@+id/line_quote"
+                android:layout_width="4dp"
+                android:layout_height="16dp"
+                android:background="@drawable/bg_line" />
+
+            <Space
+                android:layout_width="6dp"
+                android:layout_height="0dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:text="Quotes"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <Space
+                android:layout_width="220dp"
+                android:layout_height="0dp" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#00000000"
+                android:src="@drawable/ic_right" />
+
+        </LinearLayout>
+
+        <HorizontalScrollView
+            android:id="@+id/view_coba"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#00000000"
-            android:src="@drawable/ic_right" />
+            android:layout_marginTop="24dp"
+            android:elevation="2dp"
+            android:foregroundGravity=""
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_quote">
 
-    </LinearLayout>
+            <include layout="@layout/layout_bacaan" />
+        </HorizontalScrollView>
 
-<!--    Quote-->
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="32dp"
-        android:elevation="4dp"
-        android:gravity="center_vertical"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/layout_artikel">
 
-        <View
-            android:id="@+id/line_quote"
-            android:layout_width="4dp"
-            android:layout_height="16dp"
-            android:background="@drawable/bg_line" />
 
-        <Space
-            android:layout_width="6dp"
-            android:layout_height="0dp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/poppins"
-            android:text="Quotes"
-            android:textSize="14sp"
-            android:textStyle="bold" />
-
-        <Space
-            android:layout_width="220dp"
-            android:layout_height="0dp" />
-
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="#00000000"
-            android:src="@drawable/ic_right" />
-
-    </LinearLayout>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
