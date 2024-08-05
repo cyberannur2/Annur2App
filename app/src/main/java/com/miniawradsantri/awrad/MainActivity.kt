@@ -4,12 +4,13 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
+import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.setupActionBarWithNavController
+import androidx.navigation.ui.setupWithNavController
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.miniawradsantri.awrad.artikel.ListArtikelFragment
 import com.miniawradsantri.awrad.databinding.ActivityMainBinding
-import com.miniawradsantri.awrad.tentang.TentangFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -19,36 +20,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        loadFragment(HomeFragment())
-        navigationListener()
+
+        val navView: BottomNavigationView = binding.navigation
+
+        val navController = findNavController(R.id.nav_host_fragment_activity_main)
+
+        navView.setupWithNavController(navController)
 
     }
 
-    private fun navigationListener() {
-        binding.navigation.setOnItemSelectedListener { item ->
-            when (item.itemId) {
-                R.id.nav_home -> {
-                    loadFragment(HomeFragment())
-                    true
-                }
-
-                R.id.nav_artikel -> {
-                    loadFragment(ListArtikelFragment())
-                    true
-                }
-
-                R.id.nav_tentang -> {
-                    loadFragment(TentangFragment())
-                    true
-                }
-            }
-            false
-        }
-    }
-
-    private fun loadFragment(fragment: Fragment) {
-        val transaction = supportFragmentManager.beginTransaction()
-        transaction.replace(R.id.container, fragment)
-        transaction.commit()
-    }
 }
