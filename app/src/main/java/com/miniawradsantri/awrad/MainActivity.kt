@@ -1,15 +1,10 @@
 package com.miniawradsantri.awrad
 
-import android.content.Intent
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.miniawradsantri.awrad.artikel.ListArtikelFragment
 import com.miniawradsantri.awrad.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
