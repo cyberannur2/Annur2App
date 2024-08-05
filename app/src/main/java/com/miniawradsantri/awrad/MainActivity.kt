@@ -6,9 +6,10 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.miniawradsantri.awrad.artikel.ArtikelActivity
+import androidx.fragment.app.Fragment
+import com.miniawradsantri.awrad.artikel.ListArtikelFragment
 import com.miniawradsantri.awrad.databinding.ActivityMainBinding
-import com.miniawradsantri.awrad.tentang.TentangActivity
+import com.miniawradsantri.awrad.tentang.TentangFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -18,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
+        loadFragment(HomeFragment())
         navigationListener()
 
     }
@@ -27,21 +28,27 @@ class MainActivity : AppCompatActivity() {
         binding.navigation.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.nav_home -> {
-                    Intent(this, MainActivity::class.java)
-                    startActivity(intent)
+                    loadFragment(HomeFragment())
+                    true
                 }
 
                 R.id.nav_artikel -> {
-                    Intent(this, ArtikelActivity::class.java)
-                    startActivity(intent)
+                    loadFragment(ListArtikelFragment())
+                    true
                 }
 
                 R.id.nav_tentang -> {
-                    Intent(this, TentangActivity::class.java)
-                    startActivity(intent)
+                    loadFragment(TentangFragment())
+                    true
                 }
             }
             false
         }
+    }
+
+    private fun loadFragment(fragment: Fragment) {
+        val transaction = supportFragmentManager.beginTransaction()
+        transaction.replace(R.id.container, fragment)
+        transaction.commit()
     }
 }

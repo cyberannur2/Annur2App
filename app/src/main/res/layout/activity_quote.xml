@@ -5,6 +5,6 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".tentang.TentangActivity">
+    tools:context=".quote.QuoteActivity">
 
 </androidx.constraintlayout.widget.ConstraintLayout>
