@@ -44,20 +44,24 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                app:layout_constraintGuide_percent="0.3" />
+                app:layout_constraintGuide_percent="0.23" />
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/top_home_guidelane"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                app:layout_constraintGuide_percent="0.22" />
+                app:layout_constraintGuide_percent="0.15" />
+
+
 
             <com.google.android.material.imageview.ShapeableImageView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/bg1"
+                android:src="@drawable/bg_pattern"
+                android:background="@color/white"
+                app:layout_constraintBottom_toBottomOf="@id/top_home_guidelane2"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@id/top_home_guidelane"
@@ -303,6 +307,20 @@
                     android:src="@drawable/ic_right" />
 
             </LinearLayout>
+
+            <HorizontalScrollView
+                android:id="@+id/view_bacaan1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:elevation="2dp"
+                android:foregroundGravity=""
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layout_video">
+
+                <include layout="@layout/layout_bacaan" />
+            </HorizontalScrollView>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
