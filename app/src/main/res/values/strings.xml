@@ -146,4 +146,8 @@
         "when a user tries to pick up one of cards.\n\n"
     </string>
     <string name="action_settings">Settings</string>
+    <string name="semua_menu">Semua Menu</string>
+    <string name="sab_ul_munjiyat">Sab\'ul Munjiyat</string>
+    <string name="kitab_syi_ir">Kitab Syi\'ir</string>
+    <string name="dalailul_khoirot">Dalailul Khoirot</string>
 </resources>

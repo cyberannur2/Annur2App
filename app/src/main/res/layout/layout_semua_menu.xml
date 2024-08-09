@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="397dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <View
+        android:id="@+id/v"
+        android:layout_width="113dp"
+        android:layout_height="5dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_line_menu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins"
+        android:text="@string/semua_menu"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/v" />
+
+    <ImageView
+        android:id="@+id/ic_tawassul"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="16dp"
+        android:clickable="true"
+        android:contentDescription="@string/tawassul"
+        android:src="@drawable/ic_tawassul"
+        app:layout_constraintEnd_toStartOf="@+id/ic_yasin_tahlil"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_menu" />
+
+    <TextView
+        android:id="@+id/tv_tawassul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppins"
+        android:text="@string/tawassul"
+        android:textColor="@color/black"
+        android:textSize="11sp"
+        app:layout_constraintEnd_toEndOf="@+id/ic_tawassul"
+        app:layout_constraintStart_toStartOf="@+id/ic_tawassul"
+        app:layout_constraintTop_toBottomOf="@+id/ic_tawassul" />
+
+    <ImageView
+        android:id="@+id/ic_yasin_tahlil"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="24dp"
+        android:clickable="true"
+        android:contentDescription="@string/yasin_tahlil"
+        android:src="@drawable/ic_yasin_tahlil"
+        app:layout_constraintEnd_toStartOf="@+id/ic_waqiah"
+        app:layout_constraintStart_toEndOf="@id/ic_tawassul"
+        app:layout_constraintTop_toTopOf="@+id/ic_tawassul" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/yasin_tahlil"
+        android:textColor="@color/black"
+        android:textSize="11sp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppins"
+        app:layout_constraintEnd_toEndOf="@+id/ic_yasin_tahlil"
+        app:layout_constraintStart_toStartOf="@+id/ic_yasin_tahlil"
+        app:layout_constraintTop_toBottomOf="@+id/ic_yasin_tahlil" />
+
+    <ImageView
+        android:id="@+id/ic_waqiah"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="24dp"
+        android:clickable="true"
+        android:contentDescription="@string/al_waqiah"
+        android:src="@drawable/ic_waqiah"
+        app:layout_constraintEnd_toStartOf="@+id/ic_birrul_walidain"
+        app:layout_constraintStart_toEndOf="@id/ic_yasin_tahlil"
+        app:layout_constraintTop_toTopOf="@+id/ic_yasin_tahlil" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/al_waqiah"
+        android:textColor="@color/black"
+        android:textSize="11sp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppins"
+        app:layout_constraintEnd_toEndOf="@+id/ic_waqiah"
+        app:layout_constraintStart_toStartOf="@+id/ic_waqiah"
+        app:layout_constraintTop_toBottomOf="@+id/ic_waqiah" />
+
+    <ImageView
+        android:id="@+id/ic_birrul_walidain"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="24dp"
+        android:clickable="true"
+        android:contentDescription="@string/birrul_walidain"
+        android:src="@drawable/ic_birrul_walidain"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ic_waqiah"
+        app:layout_constraintTop_toTopOf="@+id/ic_waqiah" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/birrul_walidain"
+        android:textColor="@color/black"
+        android:textSize="11sp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppins"
+        app:layout_constraintEnd_toEndOf="@+id/ic_birrul_walidain"
+        app:layout_constraintStart_toStartOf="@+id/ic_birrul_walidain"
+        app:layout_constraintTop_toBottomOf="@+id/ic_birrul_walidain" />
+
+    <ImageView
+        android:id="@+id/ic_istighosah"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="16dp"
+        android:clickable="true"
+        android:contentDescription="@string/isitghosah"
+        android:src="@drawable/ic_istighosah"
+        app:layout_constraintEnd_toStartOf="@+id/ic_burdah"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_tawassul" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppins"
+        android:text="@string/isitghosah"
+        android:textColor="@color/black"
+        android:textSize="11sp"
+        app:layout_constraintEnd_toEndOf="@+id/ic_istighosah"
+        app:layout_constraintStart_toStartOf="@+id/ic_istighosah"
+        app:layout_constraintTop_toBottomOf="@+id/ic_istighosah" />
+
+    <ImageView
+        android:id="@+id/ic_burdah"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="24dp"
+        android:clickable="true"
+        android:contentDescription="@string/qasidah_burdah"
+        android:src="@drawable/ic_burdah"
+        app:layout_constraintBottom_toBottomOf="@+id/ic_istighosah"
+        app:layout_constraintEnd_toStartOf="@+id/ic_diba"
+        app:layout_constraintStart_toEndOf="@+id/ic_istighosah"
+        app:layout_constraintTop_toTopOf="@+id/ic_istighosah" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppins"
+        android:text="@string/qasidah_burdah"
+        android:textColor="@color/black"
+        android:textSize="11sp"
+        app:layout_constraintEnd_toEndOf="@+id/ic_burdah"
+        app:layout_constraintStart_toStartOf="@+id/ic_burdah"
+        app:layout_constraintTop_toBottomOf="@+id/ic_burdah" />
+
+    <ImageView
+        android:id="@+id/ic_diba"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="24dp"
+        android:clickable="true"
+        android:contentDescription="@string/maulid_diba"
+        android:src="@drawable/ic_diba"
+        app:layout_constraintBottom_toBottomOf="@+id/ic_burdah"
+        app:layout_constraintEnd_toStartOf="@+id/ic_sabul_munjiyat"
+        app:layout_constraintStart_toEndOf="@+id/ic_burdah"
+        app:layout_constraintTop_toTopOf="@+id/ic_burdah" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppins"
+        android:text="@string/maulid_diba"
+        android:textColor="@color/black"
+        android:textSize="11sp"
+        app:layout_constraintEnd_toEndOf="@+id/ic_diba"
+        app:layout_constraintStart_toStartOf="@+id/ic_diba"
+        app:layout_constraintTop_toBottomOf="@+id/ic_diba" />
+
+    <ImageView
+        android:id="@+id/ic_sabul_munjiyat"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="24dp"
+        android:clickable="true"
+        android:contentDescription="@string/sab_ul_munjiyat"
+        android:src="@drawable/ic_sabul_munjiyat"
+        app:layout_constraintBottom_toBottomOf="@+id/ic_diba"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ic_diba"
+        app:layout_constraintTop_toTopOf="@+id/ic_diba" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppins"
+        android:text="@string/sab_ul_munjiyat"
+        android:textColor="@color/black"
+        android:textSize="11sp"
+        app:layout_constraintEnd_toEndOf="@+id/ic_sabul_munjiyat"
+        app:layout_constraintStart_toStartOf="@+id/ic_sabul_munjiyat"
+        app:layout_constraintTop_toBottomOf="@+id/ic_sabul_munjiyat" />
+
+    <ImageView
+        android:id="@+id/ic_kitab_syiir"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="16dp"
+        android:clickable="true"
+        android:contentDescription="@string/kitab_syi_ir"
+        android:src="@drawable/ic_kitab_syiir"
+        app:layout_constraintEnd_toEndOf="@+id/ic_burdah"
+        app:layout_constraintStart_toStartOf="@+id/ic_burdah"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppins"
+        android:text="@string/kitab_syi_ir"
+        android:textColor="@color/black"
+        android:textSize="11sp"
+        app:layout_constraintEnd_toEndOf="@+id/ic_kitab_syiir"
+        app:layout_constraintStart_toStartOf="@+id/ic_kitab_syiir"
+        app:layout_constraintTop_toBottomOf="@+id/ic_kitab_syiir" />
+
+    <ImageView
+        android:id="@+id/ic_dalail"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:clickable="true"
+        android:contentDescription="@string/dalailul_khoirot"
+        android:src="@drawable/ic_dalail"
+        app:layout_constraintEnd_toEndOf="@+id/ic_diba"
+        app:layout_constraintStart_toStartOf="@+id/ic_diba"
+        app:layout_constraintTop_toTopOf="@+id/ic_kitab_syiir" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppins"
+        android:text="@string/dalailul_khoirot"
+        android:textColor="@color/black"
+        android:textSize="11sp"
+        app:layout_constraintEnd_toEndOf="@+id/ic_dalail"
+        app:layout_constraintStart_toStartOf="@+id/ic_dalail"
+        app:layout_constraintTop_toBottomOf="@+id/ic_dalail" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
