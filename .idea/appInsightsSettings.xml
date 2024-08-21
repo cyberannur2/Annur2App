@@ -8,10 +8,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="com.miniawradsantri.awrad" />
+                  <option name="mobileSdkAppId" value="1:1078765675204:android:472c06f84ead7eb8041f91" />
+                  <option name="projectId" value="annur2app" />
+                  <option name="projectNumber" value="1078765675204" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />

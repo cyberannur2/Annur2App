@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    alias(libs.plugins.google.gms.google.services)
     id("kotlin-parcelize")
     id ("com.google.devtools.ksp") version "1.9.0-1.0.13"
 }
@@ -54,6 +55,8 @@ dependencies {
     // Navigation components
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
+    implementation(libs.firebase.storage.ktx)
+    implementation(libs.firebase.storage)
 
     // RecyclerView
     implementation(libs.androidx.recyclerview)
@@ -83,4 +86,10 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    implementation(libs.fragment.ktx)
+
+    //Glide
+    implementation (libs.glide)
+    annotationProcessor (libs.compiler)
 }

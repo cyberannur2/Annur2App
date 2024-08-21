@@ -16,17 +16,6 @@
             android:name=".quote.QuoteActivity"
             android:exported="false" />
         <activity
-            android:name=".tentang.TentangActivity"
-            android:exported="false" />
-        <activity
-            android:name=".artikel.ArtikelActivity"
-            android:exported="false" />
-        <activity
-            android:name=".artikel.ScrollingActivity"
-            android:exported="false"
-            android:label="@string/title_activity_scrolling"
-            android:theme="@style/Theme.Annur2App.NoActionBar" />
-        <activity
             android:name=".agenda.AgendaActivity"
             android:exported="false"
             android:theme="@style/Theme.Annur2App" />
