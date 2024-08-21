@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".HomeFragment">
 
     <androidx.core.widget.NestedScrollView
@@ -54,13 +54,12 @@
                 app:layout_constraintGuide_percent="0.15" />
 
 
-
             <com.google.android.material.imageview.ShapeableImageView
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
+                android:background="@color/white"
                 android:scaleType="centerCrop"
                 android:src="@drawable/bg_pattern"
-                android:background="@color/white"
                 app:layout_constraintBottom_toBottomOf="@id/top_home_guidelane2"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -113,7 +112,7 @@
 
             <!--    Banner-->
 
-            <HorizontalScrollView
+            <RelativeLayout
                 android:id="@+id/view_banner"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -127,7 +126,7 @@
                 app:layout_constraintTop_toBottomOf="@id/line1">
 
                 <include layout="@layout/fragment_banner" />
-            </HorizontalScrollView>
+            </RelativeLayout>
 
             <!--    Agenda Terdekat-->
 
@@ -220,6 +219,40 @@
 
             </LinearLayout>
 
+            <LinearLayout
+                android:id="@+id/layout_slide_artikel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="12dp"
+
+                android:elevation="4dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toTopOf="@+id/layout_quote"
+                app:layout_constraintEnd_toEndOf="@+id/layout_artikel"
+                app:layout_constraintStart_toStartOf="@+id/layout_artikel"
+                app:layout_constraintTop_toBottomOf="@+id/layout_artikel">
+
+
+                <!--                <TextView-->
+                <!--                    android:layout_width="200dp"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:fontFamily="@font/poppins"-->
+                <!--                    android:text="www"-->
+                <!--                    android:textSize="14sp"-->
+                <!--                    android:textStyle="bold" />-->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_itemArticle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    tools:itemCount="1"
+                    tools:listitem="@layout/item_artikel" />
+
+
+            </LinearLayout>
             <HorizontalScrollView
                 android:id="@+id/view_artikel"
                 android:layout_width="wrap_content"
@@ -246,7 +279,7 @@
                 android:gravity="center_vertical"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/layout_artikel">
+                app:layout_constraintTop_toBottomOf="@id/layout_slide_artikel">
 
                 <View
                     android:id="@+id/line_quote"
@@ -323,19 +356,6 @@
 
             </LinearLayout>
 
-            <HorizontalScrollView
-                android:id="@+id/view_bacaan1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
-                android:elevation="2dp"
-                android:foregroundGravity=""
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/layout_video">
-
-                <include layout="@layout/layout_bacaan" />
-            </HorizontalScrollView>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
