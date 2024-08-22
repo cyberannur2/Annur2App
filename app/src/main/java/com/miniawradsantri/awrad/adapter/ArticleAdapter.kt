@@ -54,7 +54,7 @@ class ArticleAdapter(
             params.setMargins(15, 8, 8, 8) // Adjust margins as necessary
             holder.binding.categoryContainer.addView(textView, params)
         }
-
+        holder.binding.tvTanggal.text = article.date
 
 
         Glide.with(holder.itemView.context)

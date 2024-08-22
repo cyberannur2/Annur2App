@@ -67,6 +67,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
             try {
                 val response = withContext(Dispatchers.IO) { api.getArticles(3).execute() }
                 if (response.isSuccessful) {
+                    appDao.clearArticles()
                     val articlesResponse = response.body() ?: emptyList()
                     val mediaMapTemp = mutableListOf<MediaEntity>()
                     val articleEntities = articlesResponse.map { article ->
@@ -78,7 +79,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                         } else {
                             Log.e("MainViewModel", "Gagal untuk mengambil media ${article.id}. Error code: ${mediaResponse.code()}")
                         }
-                        ArticleEntity(article.id, article.title.rendered, article.categories, article.featured_media)
+                        ArticleEntity(article.id, article.title.rendered, article.categories, article.featured_media, article.date)
                     }
                     appDao.insertArticles(articleEntities)
                     appDao.insertMedia(mediaMapTemp)

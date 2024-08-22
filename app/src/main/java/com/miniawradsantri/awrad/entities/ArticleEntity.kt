@@ -9,7 +9,7 @@ data class ArticleEntity(
     val title: String,
     val categories: List<Int>, // Menyimpan ID kategori sebagai string yang dipisahkan koma
     val featured_media: Int,
-
+    val date: String
 )
 
 @Entity(tableName = "categories")
@@ -18,11 +18,11 @@ data class CategoryEntity(
     val name: String
 )
 
-@Entity(tableName = "tanggal")
-data class TanggalEntity(
-    @PrimaryKey val id: Int,
-    val tanggal: String
-)
+//@Entity(tableName = "tanggal")
+//data class TanggalEntity(
+//    @PrimaryKey val id: Int,
+//    val date: String
+//)
 
 @Entity(tableName = "media")
 data class MediaEntity(

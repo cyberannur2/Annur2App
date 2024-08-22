@@ -215,21 +215,20 @@
 
             </LinearLayout>
 
-            <LinearLayout
-                android:id="@+id/layout_slide_artikel"
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/fragment_article_list_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="20dp"
                 android:layout_marginBottom="12dp"
-
-                android:elevation="4dp"
-                android:orientation="horizontal"
                 app:layout_constraintBottom_toTopOf="@+id/layout_quote"
                 app:layout_constraintEnd_toEndOf="@+id/layout_artikel"
                 app:layout_constraintStart_toStartOf="@+id/layout_artikel"
                 app:layout_constraintTop_toBottomOf="@+id/layout_artikel">
+
+            </androidx.fragment.app.FragmentContainerView>
 
 
                 <!--                <TextView-->
@@ -239,16 +238,10 @@
                 <!--                    android:text="www"-->
                 <!--                    android:textSize="14sp"-->
                 <!--                    android:textStyle="bold" />-->
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/rv_itemArticle"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-
-                    tools:itemCount="1"
-                    tools:listitem="@layout/item_artikel" />
 
 
-            </LinearLayout>
+
+
             <HorizontalScrollView
                 android:id="@+id/view_artikel"
                 android:layout_width="wrap_content"
@@ -275,7 +268,7 @@
                 android:gravity="center_vertical"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/layout_slide_artikel">
+                app:layout_constraintTop_toBottomOf="@id/fragment_article_list_container">
 
                 <View
                     android:id="@+id/line_quote"
