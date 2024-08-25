@@ -2,6 +2,7 @@ package com.miniawradsantri.awrad.adapter
 
 import android.text.SpannableStringBuilder
 import android.text.Spanned
+import android.text.TextUtils
 import android.text.style.BackgroundColorSpan
 import android.text.style.ForegroundColorSpan
 import android.util.Log
@@ -20,7 +21,8 @@ import com.miniawradsantri.awrad.databinding.ItemArtikelBinding
 class ArticleAdapter(
     private val articles: List<Article>,
     private val categoriesMap: Map<Int, String>,
-    private val mediaMap: Map<Int, String>
+    private val mediaMap: Map<Int, String>,
+//    private val onArticleClick: (Article) -> Unit
 ): RecyclerView.Adapter<ArticleAdapter.ArticleViewHolder>() {
     class ArticleViewHolder(val binding: ItemArtikelBinding): RecyclerView.ViewHolder(binding.root)
 
@@ -46,10 +48,13 @@ class ArticleAdapter(
                 setBackgroundResource(R.drawable.bg_artikel_tag)
                 setPadding(12, 4, 12, 4)
                 textSize = 10f
+                ellipsize = TextUtils.TruncateAt.END
+                maxLines = 1
+                isSingleLine = true
             }
             val params = LinearLayout.LayoutParams(
                 LinearLayout.LayoutParams.WRAP_CONTENT,
-                LinearLayout.LayoutParams.WRAP_CONTENT
+                LinearLayout.LayoutParams.WRAP_CONTENT,
             )
             params.setMargins(15, 8, 8, 8) // Adjust margins as necessary
             holder.binding.categoryContainer.addView(textView, params)
@@ -60,6 +65,9 @@ class ArticleAdapter(
         Glide.with(holder.itemView.context)
             .load(mediaMap[article.featured_media])
             .into(holder.binding.ivImage)
+//        holder.itemView.setOnClickListener {
+//            onArticleClick(article)
+//        }
     }
 
 }

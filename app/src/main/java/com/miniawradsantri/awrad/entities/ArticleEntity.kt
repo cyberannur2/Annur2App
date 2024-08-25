@@ -9,7 +9,8 @@ data class ArticleEntity(
     val title: String,
     val categories: List<Int>, // Menyimpan ID kategori sebagai string yang dipisahkan koma
     val featured_media: Int,
-    val date: String
+    val date: String,
+//    val content: String
 )
 
 @Entity(tableName = "categories")

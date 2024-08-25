@@ -9,18 +9,23 @@
         android:id="@+id/nav_home"
         android:name="com.miniawradsantri.awrad.HomeFragment"
         android:label="Beranda"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home">
+
+    </fragment>
 
     <fragment
         android:id="@+id/nav_artikel"
         android:name="com.miniawradsantri.awrad.artikel.ListArtikelFragment"
         android:label="Artikel"
-        tools:layout="@layout/fragment_list_artikel" />
+        tools:layout="@layout/fragment_list_artikel">
+
+    </fragment>
 
     <fragment
         android:id="@+id/nav_tentang"
         android:name="com.miniawradsantri.awrad.tentang.TentangFragment"
         android:label="Tentang"
         tools:layout="@layout/fragment_tentang" />
+
 
 </navigation>

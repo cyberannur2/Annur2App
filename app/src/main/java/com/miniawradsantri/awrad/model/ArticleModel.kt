@@ -5,7 +5,8 @@ data class Article(
     val title: Title,
     val categories: List<Int>,
     val featured_media: Int,
-    val date: String
+    val date: String,
+//    val content: Content
 //    val categories_map: Map<Int, String>
 )
 
@@ -21,5 +22,8 @@ data class Media(
 data class Category(
     val id: Int,
     val name: String
+)
+data class Content(
+    val rendered: String
 )
 
