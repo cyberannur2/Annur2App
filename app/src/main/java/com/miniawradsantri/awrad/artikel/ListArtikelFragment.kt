@@ -13,6 +13,7 @@ import com.miniawradsantri.awrad.adapter.ArticleAdapter
 import com.miniawradsantri.awrad.databinding.FragmentListArtikelBinding
 import com.miniawradsantri.awrad.entities.ArticleEntity
 import com.miniawradsantri.awrad.model.Article
+import com.miniawradsantri.awrad.model.Content
 import com.miniawradsantri.awrad.model.Title
 import com.miniawradsantri.awrad.utils.HorizontalSpaceItemDecoration
 import com.miniawradsantri.awrad.viewmodel.MainViewModel
@@ -57,6 +58,9 @@ class ListArtikelFragment : Fragment() {
         viewModel.mediaMap.observe(viewLifecycleOwner, Observer {
             updateRecyclerView(viewModel.articles.value ?: emptyList())
         })
+        viewModel.isLoading.observe(viewLifecycleOwner, Observer { isLoading ->
+            binding.progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE
+        })
     }
 
     private fun updateRecyclerView(articles: List<ArticleEntity>) {
@@ -69,9 +73,32 @@ class ListArtikelFragment : Fragment() {
                 categories = article.categories,
                 featured_media = article.featured_media,
                 date = article.date
-            )
+//                content = Content(article.content)
+                )
         }
-        binding.rvItemArticle.adapter = ArticleAdapter(articleList, categoriesMap, mediaMap)
+        binding.rvItemArticle.adapter =
+            ArticleAdapter(articleList, categoriesMap, mediaMap)
+//            { article ->
+//                val bundle = Bundle().apply {
+//                    putString("title", article.title.rendered)
+//                    putString("content", article.content.rendered)
+//                    putString("imageUrl", mediaMap[article.featured_media])
+//                    putStringArrayList(
+//                        "category",
+//                        ArrayList(article.categories.map { categoriesMap[it] ?: "Unknown" })
+//                    )
+//
+//
+//                }
+//                val detailArtikel = DetailArtikel().apply {
+//                    arguments = bundle
+//                }
+//                parentFragmentManager.beginTransaction()
+//                    .replace(R.id.fragment_container, detailArtikel)
+//                    .addToBackStack(null)
+//                    .commit()
+//            }
+
     }
 
     override fun onDestroyView() {

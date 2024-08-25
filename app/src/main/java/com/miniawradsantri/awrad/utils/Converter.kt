@@ -15,4 +15,11 @@ class Converters {
     fun fromList(list: List<Int>): String {
         return Gson().toJson(list)
     }
+
+//    @TypeConverter
+//    fun fromList(categories: List<Int>): String {
+//        return categories.joinToString(",")
+//    }
+
+
 }

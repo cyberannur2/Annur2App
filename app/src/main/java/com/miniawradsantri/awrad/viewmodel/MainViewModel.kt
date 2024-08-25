@@ -14,6 +14,9 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
 
 class MainViewModel(application: Application) : AndroidViewModel(application) {
 
@@ -32,6 +35,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     val mediaMap: LiveData<Map<Int, String>> = media.map { list ->
         list.associate { it.id to it.source_url }
     }
+    val isLoading = MutableLiveData<Boolean>()
 
     private val retrofit = Retrofit.Builder()
         .baseUrl("https://annur2.net/")
@@ -46,6 +50,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
 
     private fun fetchCategories() {
         viewModelScope.launch {
+            isLoading.value = true
             try {
                 val response = withContext(Dispatchers.IO) { api.getCategories(perPage = 70).execute() }
                 if (response.isSuccessful) {
@@ -58,19 +63,30 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                 fetchArticles()
             } catch (e: Exception) {
                 Log.e("MainViewModel", "Gagal Mengambil kategori: ${e.message}")
+            }finally {
+                isLoading.value = false
             }
         }
     }
 
     private fun fetchArticles() {
         viewModelScope.launch {
+            isLoading.value = true
             try {
                 val response = withContext(Dispatchers.IO) { api.getArticles(3).execute() }
                 if (response.isSuccessful) {
-                    appDao.clearArticles()
+
+
                     val articlesResponse = response.body() ?: emptyList()
+
+
                     val mediaMapTemp = mutableListOf<MediaEntity>()
                     val articleEntities = articlesResponse.map { article ->
+                        // Mengubah format tanggal artikel
+                        val inputFormat = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss", Locale.getDefault())
+                        val outputFormat = SimpleDateFormat("dd-MM-yyyy", Locale.getDefault())
+                        val date: Date? = inputFormat.parse(article.date)
+                        val formattedDate = date?.let { outputFormat.format(it) } ?: article.date
                         val mediaResponse = withContext(Dispatchers.IO) { api.getMedia(article.featured_media).execute() }
                         if (mediaResponse.isSuccessful) {
                             mediaResponse.body()?.let { media ->
@@ -79,8 +95,9 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                         } else {
                             Log.e("MainViewModel", "Gagal untuk mengambil media ${article.id}. Error code: ${mediaResponse.code()}")
                         }
-                        ArticleEntity(article.id, article.title.rendered, article.categories, article.featured_media, article.date)
+                        ArticleEntity(article.id, article.title.rendered, article.categories, article.featured_media, formattedDate)
                     }
+                    appDao.clearArticles()
                     appDao.insertArticles(articleEntities)
                     appDao.insertMedia(mediaMapTemp)
                     Log.d("MainViewModel", "Berhasil mengambil data artikel dan media.")
@@ -89,6 +106,8 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                 }
             } catch (e: Exception) {
                 Log.e("MainViewModel", "Gagal untuk mengambil artikel: ${e.message}")
+            }finally {
+                isLoading.value = false
             }
         }
     }
