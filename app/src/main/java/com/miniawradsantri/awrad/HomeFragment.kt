@@ -9,6 +9,7 @@ import com.miniawradsantri.awrad.banner.BannerFragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.miniawradsantri.awrad.adapter.ArticleAdapter
 import com.miniawradsantri.awrad.artikel.ListArtikelFragment
 import com.miniawradsantri.awrad.databinding.FragmentHomeBinding
@@ -49,8 +50,16 @@ class HomeFragment : Fragment() {
         fragmentManager.beginTransaction()
             .replace(R.id.fragment_article_list_container, ListArtikelFragment())
             .commit()
+
+        binding.includeBacaan.icLainnya.setOnClickListener {
+            showBottomSheet()
+        }
     }
 
-
-
+    private fun showBottomSheet() {
+        val dialogView = layoutInflater.inflate(R.layout.layout_semua_menu, null)
+        val dialog = BottomSheetDialog(requireContext())
+        dialog.setContentView(dialogView)
+        dialog.show()
+    }
 }
