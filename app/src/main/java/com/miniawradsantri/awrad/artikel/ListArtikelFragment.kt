@@ -16,7 +16,7 @@ import com.miniawradsantri.awrad.model.Article
 import com.miniawradsantri.awrad.model.Content
 import com.miniawradsantri.awrad.model.Title
 import com.miniawradsantri.awrad.utils.HorizontalSpaceItemDecoration
-import com.miniawradsantri.awrad.viewmodel.MainViewModel
+import com.miniawradsantri.awrad.viewmodel.ArtikelViewModel
 
 
 
@@ -24,13 +24,13 @@ class ListArtikelFragment : Fragment() {
     private var _binding: FragmentListArtikelBinding? = null
     private val binding get() = _binding!!
 
-    private val viewModel: MainViewModel by viewModels()
+    private val viewModel: ArtikelViewModel by viewModels()
 
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentListArtikelBinding.inflate(inflater, container, false)
         // Inflate the layout for this fragment
         return binding.root
@@ -72,32 +72,32 @@ class ListArtikelFragment : Fragment() {
                 title = Title(article.title),
                 categories = article.categories,
                 featured_media = article.featured_media,
-                date = article.date
-//                content = Content(article.content)
+                date = article.date,
+                content = Content(article.content)
+//                link = article.link
                 )
         }
         binding.rvItemArticle.adapter =
-            ArticleAdapter(articleList, categoriesMap, mediaMap)
-//            { article ->
-//                val bundle = Bundle().apply {
-//                    putString("title", article.title.rendered)
-//                    putString("content", article.content.rendered)
-//                    putString("imageUrl", mediaMap[article.featured_media])
-//                    putStringArrayList(
-//                        "category",
-//                        ArrayList(article.categories.map { categoriesMap[it] ?: "Unknown" })
-//                    )
-//
-//
-//                }
-//                val detailArtikel = DetailArtikel().apply {
-//                    arguments = bundle
-//                }
-//                parentFragmentManager.beginTransaction()
-//                    .replace(R.id.fragment_container, detailArtikel)
-//                    .addToBackStack(null)
-//                    .commit()
-//            }
+            ArticleAdapter(articleList, categoriesMap, mediaMap){ article ->
+                val bundle = Bundle().apply {
+                    putString("title", article.title.rendered)
+                    putString("content", article.content.rendered)
+                    putString("imageUrl", mediaMap[article.featured_media])
+                    putStringArrayList(
+                        "category",
+                        ArrayList(article.categories.map { categoriesMap[it] ?: "Unknown" })
+                    )
+//                    putString("articleUrl", article.link)
+
+                }
+                val detailArtikel = DetailArtikel().apply {
+                    arguments = bundle
+                }
+                parentFragmentManager.beginTransaction()
+                    .replace(R.id.ssss, detailArtikel, DetailArtikel::class.java.simpleName)
+                    .addToBackStack(null)
+                    .commit()
+            }
 
     }
 

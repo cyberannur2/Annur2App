@@ -13,11 +13,7 @@ import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.miniawradsantri.awrad.adapter.ArticleAdapter
 import com.miniawradsantri.awrad.artikel.ListArtikelFragment
 import com.miniawradsantri.awrad.databinding.FragmentHomeBinding
-import com.miniawradsantri.awrad.entities.ArticleEntity
-import com.miniawradsantri.awrad.model.Article
-import com.miniawradsantri.awrad.model.Title
-import com.miniawradsantri.awrad.utils.HorizontalSpaceItemDecoration
-import com.miniawradsantri.awrad.viewmodel.MainViewModel
+import com.miniawradsantri.awrad.viewmodel.ArtikelViewModel
 
 
 class HomeFragment : Fragment() {
@@ -25,7 +21,7 @@ class HomeFragment : Fragment() {
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
 
-    private val viewModel: MainViewModel by viewModels()
+    private val viewModel: ArtikelViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?

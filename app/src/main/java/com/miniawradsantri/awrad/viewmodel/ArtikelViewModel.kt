@@ -18,7 +18,7 @@ import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
 
-class MainViewModel(application: Application) : AndroidViewModel(application) {
+class ArtikelViewModel(application: Application) : AndroidViewModel(application) {
 
     private val appDao = AppDatabase.getDatabase(application).appDao()
 
@@ -87,6 +87,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                         val outputFormat = SimpleDateFormat("dd-MM-yyyy", Locale.getDefault())
                         val date: Date? = inputFormat.parse(article.date)
                         val formattedDate = date?.let { outputFormat.format(it) } ?: article.date
+                        val content = article.content.rendered
                         val mediaResponse = withContext(Dispatchers.IO) { api.getMedia(article.featured_media).execute() }
                         if (mediaResponse.isSuccessful) {
                             mediaResponse.body()?.let { media ->
@@ -95,7 +96,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                         } else {
                             Log.e("MainViewModel", "Gagal untuk mengambil media ${article.id}. Error code: ${mediaResponse.code()}")
                         }
-                        ArticleEntity(article.id, article.title.rendered, article.categories, article.featured_media, formattedDate)
+                        ArticleEntity(article.id, article.title.rendered, article.categories, article.featured_media, formattedDate,content)
                     }
                     appDao.clearArticles()
                     appDao.insertArticles(articleEntities)
