@@ -33,6 +33,7 @@ kotlinxCoroutinesAndroid = "1.7.3"
 # Room
 roomCompiler = "2.6.0"
 roomRuntime = "2.6.0"
+firebaseFirestore = "25.1.0"
 
 
 
@@ -73,6 +74,7 @@ kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutine
 androidx-room-ktx = { module = "androidx.room:room-ktx", version.ref = "roomCompiler" }
 androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "roomRuntime" }
 androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref = "roomRuntime" }
+firebase-firestore = { group = "com.google.firebase", name = "firebase-firestore", version.ref = "firebaseFirestore" }
 
 
 

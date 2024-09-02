@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_marginEnd="16dp">
@@ -9,11 +10,11 @@
         android:id="@+id/view"
         android:layout_width="165dp"
         android:layout_height="230dp"
+        android:background="@drawable/bg_banner"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:background="@drawable/bg_banner"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
+    <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/iv_agenda"
         android:layout_width="163dp"
         android:layout_height="148dp"
@@ -22,10 +23,11 @@
         android:src="@drawable/pre_agenda"
         app:layout_constraintEnd_toEndOf="@+id/view"
         app:layout_constraintStart_toStartOf="@id/view"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/roundimageview_banner" />
 
     <View
-        android:id="@+id/kategori"
+        android:id="@+id/v_kategori"
         android:layout_width="50dp"
         android:layout_height="15dp"
         android:layout_marginStart="8dp"
@@ -35,46 +37,47 @@
         app:layout_constraintTop_toTopOf="@id/iv_agenda" />
 
     <TextView
+        android:id="@+id/kategori"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins"
-        android:text="@string/umum"
         android:textColor="@color/white"
         android:textSize="8sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/kategori"
-        app:layout_constraintEnd_toEndOf="@+id/kategori"
-        app:layout_constraintStart_toStartOf="@id/kategori"
-        app:layout_constraintTop_toTopOf="@id/kategori" />
+        app:layout_constraintBottom_toBottomOf="@+id/v_kategori"
+        app:layout_constraintEnd_toEndOf="@+id/v_kategori"
+        app:layout_constraintStart_toStartOf="@id/v_kategori"
+        app:layout_constraintTop_toTopOf="@id/v_kategori"
+        tools:text="@string/umum" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tanggal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/poppins"
-        android:text="28 Juli 2024"
         android:textColor="@color/black"
         android:textSize="9sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@id/view"
-        app:layout_constraintTop_toBottomOf="@+id/iv_agenda" />
+        app:layout_constraintTop_toBottomOf="@+id/iv_agenda"
+        tools:text="28 Juli 2024" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/judul"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:ellipsize="end"
         android:maxLines="2"
-        android:text="Pengajian Rutin Ahad Legi"
+        android:textColor="@color/black"
         android:textSize="14sp"
         android:textStyle="bold"
-        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="@+id/view"
-        app:layout_constraintStart_toStartOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintStart_toStartOf="@+id/tanggal"
+        app:layout_constraintTop_toBottomOf="@+id/tanggal"
+        tools:text="Pengajian Rutin Ahad Legi" />
 
     <View
         android:layout_width="165dp"

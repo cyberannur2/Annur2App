@@ -6,9 +6,10 @@
     tools:context=".agenda.AgendaFragment">
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_agenda"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:listitem="@layout/item_agenda"
-        tools:itemCount="4" />
+        tools:itemCount="3"
+        tools:listitem="@layout/item_agenda" />
 
 </FrameLayout>
