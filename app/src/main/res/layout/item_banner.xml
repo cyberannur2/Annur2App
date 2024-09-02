@@ -7,8 +7,8 @@
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/iv_banner"
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
+        android:layout_width="290dp"
+        android:layout_height="70dp"
         tools:src="@drawable/pre_banner"
         app:shapeAppearanceOverlay="@style/roundimageview_banner"
         app:layout_constraintEnd_toEndOf="parent"
