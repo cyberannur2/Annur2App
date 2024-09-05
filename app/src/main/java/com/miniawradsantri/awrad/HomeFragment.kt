@@ -11,6 +11,7 @@ import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.miniawradsantri.awrad.adapter.ArticleAdapter
+import com.miniawradsantri.awrad.agenda.AgendaFragment
 import com.miniawradsantri.awrad.artikel.ListArtikelFragment
 import com.miniawradsantri.awrad.databinding.FragmentHomeBinding
 import com.miniawradsantri.awrad.viewmodel.ArtikelViewModel
@@ -38,15 +39,24 @@ class HomeFragment : Fragment() {
 
         val fragmentManager = childFragmentManager
 
+        // Banner Fragment
         fragmentManager.beginTransaction()
             .replace(R.id.view_banner, BannerFragment())
             .addToBackStack(null)
             .commit()
+
+        // Agenda Fragment
+        fragmentManager.beginTransaction()
+            .replace(R.id.view_agenda, AgendaFragment())
+            .addToBackStack(null)
+            .commit()
+
         // Artikel List Fragment
         fragmentManager.beginTransaction()
             .replace(R.id.fragment_article_list_container, ListArtikelFragment())
             .commit()
 
+        // Show Bottom Sheet
         binding.includeBacaan.icLainnya.setOnClickListener {
             showBottomSheet()
         }

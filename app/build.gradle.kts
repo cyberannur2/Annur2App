@@ -68,6 +68,7 @@ dependencies {
 
     // Glide (Image Loading)
     implementation(libs.glide)
+    implementation(libs.firebase.firestore)
     annotationProcessor(libs.compiler)
 
     // Retrofit (Networking)
