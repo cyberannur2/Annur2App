@@ -9,7 +9,7 @@ import com.miniawradsantri.awrad.dao.AppDao
 import com.miniawradsantri.awrad.utils.Converters
 import com.miniawradsantri.awrad.entities.*
 
-@Database(entities = [ArticleEntity::class, CategoryEntity::class, MediaEntity::class], version = 5)
+@Database(entities = [ArticleEntity::class, CategoryEntity::class, MediaEntity::class], version = 6)
 @TypeConverters(Converters::class)
 abstract class AppDatabase : RoomDatabase() {
 

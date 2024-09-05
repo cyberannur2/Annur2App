@@ -4,11 +4,14 @@ import android.app.Application
 import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.*
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.map
 import androidx.lifecycle.viewModelScope
-import com.miniawradsantri.awrad.repository.AppDatabase
 import com.miniawradsantri.awrad.data.WordPressApi
-import com.miniawradsantri.awrad.entities.*
+import com.miniawradsantri.awrad.entities.ArticleEntity
+import com.miniawradsantri.awrad.entities.CategoryEntity
+import com.miniawradsantri.awrad.entities.MediaEntity
+import com.miniawradsantri.awrad.repository.AppDatabase
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -18,8 +21,7 @@ import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
 
-class ArtikelViewModel(application: Application) : AndroidViewModel(application) {
-
+class ListViewModel(application: Application) : AndroidViewModel(application) {
     private val appDao = AppDatabase.getDatabase(application).appDao()
 
     val articles: LiveData<List<ArticleEntity>> = appDao.getAllArticles()
@@ -73,7 +75,7 @@ class ArtikelViewModel(application: Application) : AndroidViewModel(application)
         viewModelScope.launch {
             isLoading.value = true
             try {
-                val response = withContext(Dispatchers.IO) { api.getArticles(3).execute() }
+                val response = withContext(Dispatchers.IO) { api.getArticles(10).execute() }
                 if (response.isSuccessful) {
 
 

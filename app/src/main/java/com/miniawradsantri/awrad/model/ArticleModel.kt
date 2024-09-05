@@ -7,7 +7,7 @@ data class Article(
     val featured_media: Int,
     val date: String,
     val content: Content,
-//    val link: String
+    val link: String
 //    val categories_map: Map<Int, String>
 )
 

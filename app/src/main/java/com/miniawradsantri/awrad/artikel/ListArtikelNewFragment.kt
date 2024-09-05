@@ -1,10 +1,10 @@
 package com.miniawradsantri.awrad.artikel
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -16,15 +16,13 @@ import com.miniawradsantri.awrad.model.Article
 import com.miniawradsantri.awrad.model.Content
 import com.miniawradsantri.awrad.model.Title
 import com.miniawradsantri.awrad.utils.HorizontalSpaceItemDecoration
-import com.miniawradsantri.awrad.viewmodel.ArtikelViewModel
+import com.miniawradsantri.awrad.viewmodel.ListViewModel
 
-
-
-class ListArtikelFragment : Fragment() {
+class ListArtikelNewFragment: Fragment() {
     private var _binding: FragmentListArtikelBinding? = null
     private val binding get() = _binding!!
 
-    private val viewModel: ArtikelViewModel by viewModels()
+    private val viewModel: ListViewModel by viewModels()
 
 
     override fun onCreateView(
@@ -75,7 +73,7 @@ class ListArtikelFragment : Fragment() {
                 date = article.date,
                 content = Content(article.content),
                 link = article.link
-                )
+            )
         }
         binding.rvItemArticle.adapter =
             ArticleAdapter(articleList, categoriesMap, mediaMap){ article ->
@@ -87,7 +85,7 @@ class ListArtikelFragment : Fragment() {
                     arguments = bundle
                 }
                 parentFragmentManager.beginTransaction()
-                    .replace(R.id.frame_home, detailArtikel, DetailArtikel::class.java.simpleName)
+                    .replace(R.id.fragment_article_list_container1, detailArtikel, DetailArtikel::class.java.simpleName)
                     .addToBackStack(null)
                     .commit()
             }
@@ -98,5 +96,4 @@ class ListArtikelFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
-
 }

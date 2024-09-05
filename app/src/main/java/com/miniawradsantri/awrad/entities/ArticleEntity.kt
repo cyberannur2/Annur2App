@@ -11,7 +11,7 @@ data class ArticleEntity(
     val featured_media: Int,
     val date: String,
     val content: String,
-//    val link: String
+    val link: String
 )
 
 @Entity(tableName = "categories")

@@ -33,6 +33,8 @@ kotlinxCoroutinesAndroid = "1.7.3"
 # Room
 roomCompiler = "2.6.0"
 roomRuntime = "2.6.0"
+#Shimmer
+shimmer = "0.5.0"
 
 
 
@@ -73,6 +75,7 @@ kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutine
 androidx-room-ktx = { module = "androidx.room:room-ktx", version.ref = "roomCompiler" }
 androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "roomRuntime" }
 androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref = "roomRuntime" }
+shimmer = { module = "com.facebook.shimmer:shimmer", version.ref = "shimmer" }
 
 
 

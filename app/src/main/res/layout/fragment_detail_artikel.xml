@@ -10,56 +10,66 @@
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:elevation="5dp">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
+            android:background="@color/white"
             app:title="Detail Artikel"
+
             app:navigationIcon="@drawable/kembali_tombol" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
     <!-- Tambahkan NestedScrollView di sini -->
-    <androidx.core.widget.NestedScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="16dp">
+<!--    <androidx.core.widget.NestedScrollView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:padding="16dp">-->
+
 
         <!-- Layout utama ditempatkan di dalam NestedScrollView -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:id="@+id/fragment_container">
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="vertical"-->
+<!--            android:id="@+id/fragment_container">-->
 
-            <TextView
-                android:id="@+id/tv_title_detail"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+<!--            <TextView-->
+<!--                android:id="@+id/tv_title_detail"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textSize="20sp"-->
+<!--                android:textStyle="bold" />-->
 
-            <ImageView
-                android:id="@+id/iv_image_detail"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:scaleType="centerCrop"
-                android:layout_marginTop="8dp" />
+<!--            <ImageView-->
+<!--                android:id="@+id/iv_image_detail"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="200dp"-->
+<!--                android:scaleType="centerCrop"-->
+<!--                android:layout_marginTop="8dp" />-->
 
-            <LinearLayout
-                android:id="@+id/category_container_detail"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
-                android:layout_marginTop="8dp"
-                android:orientation="horizontal"
-                >
-                <!-- Category tags akan ditambahkan secara programatis di sini -->
-            </LinearLayout>
+<!--            <LinearLayout-->
+<!--                android:id="@+id/category_container_detail"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="20dp"-->
+<!--                android:layout_marginEnd="20dp"-->
+<!--                android:layout_marginTop="8dp"-->
+<!--                android:orientation="horizontal"-->
+<!--                >-->
+<!--                &lt;!&ndash; Category tags akan ditambahkan secara programatis di sini &ndash;&gt;-->
+<!--            </LinearLayout>-->
+<!--            <TextView-->
+<!--                android:id="@+id/tv_content"-->
+<!--                android:textColorLink="@color/blue"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="16dp"-->
+<!--                android:text="aaaaaaaaaa"/>-->
 
             <WebView
                 android:id="@+id/webview_detail"
@@ -67,11 +77,41 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
 
-                tools:ignore="WebViewLayout" />
+                tools:ignore="WebViewLayout"
+                />
 
-            <!-- Anda dapat menambahkan LinearLayout atau RecyclerView untuk kategori jika diperlukan -->
+
+<!--             Anda dapat menambahkan LinearLayout atau RecyclerView untuk kategori jika diperlukan -->
+
+<!--        </LinearLayout>-->
+
+<!--    </androidx.core.widget.NestedScrollView>-->
+    <!-- Shimmer layout for loading effect -->
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer_view_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        
+        android:layout_gravity="center">
+
+        <!-- This layout will shimmer -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@android:color/darker_gray" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginTop="16dp"
+                android:background="@android:color/darker_gray" />
 
         </LinearLayout>
-
-    </androidx.core.widget.NestedScrollView>
+    </com.facebook.shimmer.ShimmerFrameLayout>
 </FrameLayout>
