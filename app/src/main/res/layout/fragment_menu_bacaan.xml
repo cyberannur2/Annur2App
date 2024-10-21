@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/bg_bottom_sheet"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    tools:context=".bacaan.MenuBacaan"
+    android:id="@+id/fragment_menu_bacaan">
 
     <View
         android:id="@+id/v"
@@ -66,13 +69,14 @@
         app:layout_constraintTop_toTopOf="@+id/ic_tawassul" />
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppins"
         android:text="@string/yasin_tahlil"
         android:textColor="@color/black"
         android:textSize="11sp"
-        android:layout_marginTop="8dp"
-        android:fontFamily="@font/poppins"
         app:layout_constraintEnd_toEndOf="@+id/ic_yasin_tahlil"
         app:layout_constraintStart_toStartOf="@+id/ic_yasin_tahlil"
         app:layout_constraintTop_toBottomOf="@+id/ic_yasin_tahlil" />
@@ -131,7 +135,7 @@
         android:layout_height="46dp"
         android:layout_marginTop="16dp"
         android:clickable="true"
-        android:contentDescription="@string/isitghosah"
+        android:contentDescription="@string/istighosah"
         android:src="@drawable/ic_istighosah"
         app:layout_constraintEnd_toStartOf="@+id/ic_burdah"
         app:layout_constraintStart_toStartOf="parent"
@@ -143,7 +147,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/poppins"
-        android:text="@string/isitghosah"
+        android:text="@string/istighosah"
         android:textColor="@color/black"
         android:textSize="11sp"
         app:layout_constraintEnd_toEndOf="@+id/ic_istighosah"
@@ -216,6 +220,7 @@
         app:layout_constraintTop_toTopOf="@+id/ic_diba" />
 
     <TextView
+        android:id="@+id/textView13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -283,3 +288,4 @@
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+

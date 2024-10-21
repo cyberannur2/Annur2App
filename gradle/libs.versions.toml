@@ -1,5 +1,7 @@
 [versions]
-agp = "8.5.2"
+agp = "8.7.1"
+androidPdfViewer = "2.8.2"
+firebaseBom = "33.4.0"
 fragmentKtxVersion = "1.8.2"
 kotlin = "1.9.0"
 coreKtx = "1.13.1"
@@ -36,6 +38,7 @@ roomRuntime = "2.6.0"
 #Shimmer
 shimmer = "0.5.0"
 firebaseFirestore = "25.1.0"
+shimmerVersion = "0.5.0"
 
 
 
@@ -44,6 +47,8 @@ firebaseFirestore = "25.1.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBom" }
+firebase-firestore = { module = "com.google.firebase:firebase-firestore" }
 fragment-ktx = { module = "androidx.fragment:fragment-ktx", version.ref = "fragmentKtxVersion" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
@@ -76,6 +81,7 @@ kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutine
 androidx-room-ktx = { module = "androidx.room:room-ktx", version.ref = "roomCompiler" }
 androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "roomRuntime" }
 androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref = "roomRuntime" }
+shimmer = { module = "com.facebook.shimmer:shimmer", version.ref = "shimmerVersion" }
 
 
 

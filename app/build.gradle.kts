@@ -68,6 +68,7 @@ dependencies {
 
     // Glide (Image Loading)
     implementation(libs.glide)
+    implementation(platform(libs.firebase.bom))
     implementation(libs.firebase.firestore)
     annotationProcessor(libs.compiler)
 
@@ -96,4 +97,8 @@ dependencies {
 
     //shimmer
     implementation (libs.shimmer)
+
+    //Pdf Viewer
+    implementation("com.github.DImuthuUpe:AndroidPdfViewer:3.1.0-beta.1")
+    implementation("com.github.amitshekhariitbhu:PRDownloader:1.0.1")
 }

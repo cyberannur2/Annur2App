@@ -20,7 +20,7 @@
             android:background="@color/white"
             app:title="Detail Artikel"
 
-            app:navigationIcon="@drawable/kembali_tombol" />
+            app:navigationIcon="@drawable/btn_back" />
 
     </com.google.android.material.appbar.AppBarLayout>
 

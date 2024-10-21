@@ -1,60 +1,84 @@
 package com.miniawradsantri.awrad.tentang
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.miniawradsantri.awrad.R
+import com.miniawradsantri.awrad.databinding.FragmentTentangBinding
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [TentangFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class TentangFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+
+    private lateinit var binding: FragmentTentangBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
+
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_tentang, container, false)
+        binding = FragmentTentangBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment TentangFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            TentangFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        binding.vIg.setOnClickListener {
+            val instagramUrl = "https://www.instagram.com/annur2malang/"
+            val intent = Intent(Intent.ACTION_VIEW).apply {
+                data = Uri.parse(instagramUrl)
             }
+            startActivity(intent)
+        }
+
+        binding.vYt.setOnClickListener {
+            val youtubeUrl = "https://www.youtube.com/@annur2malangofficial"
+            val intent = Intent(Intent.ACTION_VIEW).apply {
+                data = Uri.parse(youtubeUrl)
+            }
+            startActivity(intent)
+        }
+
+        binding.vTt.setOnClickListener {
+            val tiktokUrl = "https://www.tiktok.com/@annur2malang"
+            val intent = Intent(Intent.ACTION_VIEW).apply {
+                data = Uri.parse(tiktokUrl)
+            }
+            startActivity(intent)
+        }
+
+        binding.vWeb.setOnClickListener {
+            val webUrl = "https://annur2.net/"
+            val intent = Intent(Intent.ACTION_VIEW).apply {
+                data = Uri.parse(webUrl)
+            }
+            startActivity(intent)
+        }
+
+        binding.vWa.setOnClickListener {
+            val webUrl = "https://api.whatsapp.com/send/?phone=6285822221979&text&type=phone_number&app_absent=0"
+            val intent = Intent(Intent.ACTION_VIEW).apply {
+                data = Uri.parse(webUrl)
+            }
+            startActivity(intent)
+        }
+
+        binding.vCekUpdate.setOnClickListener {
+            val webUrl = "https://play.google.com/store/apps/details?id=com.miniawradsantri.awrad"
+            val intent = Intent(Intent.ACTION_VIEW).apply {
+                data = Uri.parse(webUrl)
+            }
+            startActivity(intent)
+        }
     }
+
 }

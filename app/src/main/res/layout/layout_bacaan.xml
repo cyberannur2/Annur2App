@@ -112,7 +112,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/poppins"
-        android:text="@string/isitghosah"
+        android:text="@string/istighosah"
         android:textColor="@color/black"
         android:textSize="11sp"
         app:layout_constraintEnd_toEndOf="@+id/ic_istighosah"

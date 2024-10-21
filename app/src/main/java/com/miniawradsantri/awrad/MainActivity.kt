@@ -27,4 +27,16 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+//    override fun onBackPressed() {
+//        val fragmentManager = supportFragmentManager
+//        if (fragmentManager.backStackEntryCount > 0) {
+//            // Jika ada fragment di back stack, pop fragment tersebut
+//            fragmentManager.popBackStack()
+//        } else {
+//            // Jika tidak ada fragment di back stack, keluar dari aplikasi
+//            super.onBackPressed()
+//        }
+//    }
+
+
 }
