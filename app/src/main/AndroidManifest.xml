@@ -17,10 +17,6 @@
             android:name=".quote.QuoteActivity"
             android:exported="false" />
         <activity
-            android:name=".agenda.AgendaActivity"
-            android:exported="false"
-            android:theme="@style/Theme.Annur2App" />
-        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

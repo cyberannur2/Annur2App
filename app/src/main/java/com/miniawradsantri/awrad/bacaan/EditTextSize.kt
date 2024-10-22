@@ -17,7 +17,6 @@ import com.miniawradsantri.awrad.databinding.FragmentEditTextSizeBinding
 class EditTextSize : Fragment() {
     private lateinit var binding: FragmentEditTextSizeBinding
     private val MIN_TEXT_SIZE = 16
-    private val DEFAULT_TEXT_SIZE = 16
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -82,7 +81,7 @@ class EditTextSize : Fragment() {
     private fun loadTextSize(): Int {
         val sharedPreferences =
             requireContext().getSharedPreferences("MyPrefs_TextSize", Context.MODE_PRIVATE)
-        return sharedPreferences.getInt("TEXT_SIZE", DEFAULT_TEXT_SIZE)
+        return sharedPreferences.getInt("TEXT_SIZE", MIN_TEXT_SIZE)
     }
 
 
