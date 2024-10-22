@@ -47,7 +47,7 @@ class ArticleAdapter(
                 setTextColor(ContextCompat.getColor(context, R.color.white))
                 setBackgroundResource(R.drawable.bg_artikel_tag)
                 setPadding(8, 8, 8, 8)
-                textSize = 10f
+                textSize = 9f
                 ellipsize = TextUtils.TruncateAt.END
                 maxLines = 1
                 isSingleLine = true
@@ -56,7 +56,7 @@ class ArticleAdapter(
                 LinearLayout.LayoutParams.WRAP_CONTENT,
                 LinearLayout.LayoutParams.WRAP_CONTENT,
             )
-            params.setMargins(10, 8, 8, 8) // Adjust margins as necessary
+            params.setMargins(0, 8, 8, 0) // Adjust margins as necessary
             holder.binding.categoryContainer.addView(textView, params)
         }
         holder.binding.tvTanggal.text = article.date

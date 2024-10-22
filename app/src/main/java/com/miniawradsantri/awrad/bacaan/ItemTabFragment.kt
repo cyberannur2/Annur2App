@@ -8,12 +8,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.miniawradsantri.awrad.databinding.FragmentTestBinding
+import com.miniawradsantri.awrad.databinding.FragmentItemTabBinding
 
 
 class ItemTabFragment : Fragment() {
 
-    private lateinit var binding: FragmentTestBinding
+    private lateinit var binding: FragmentItemTabBinding
 
     private val DEFAULT_TEXT_SIZE = 16
 
@@ -41,7 +41,7 @@ class ItemTabFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         // Inflate the layout for this fragment
-        binding = FragmentTestBinding.inflate(inflater, container, false)
+        binding = FragmentItemTabBinding.inflate(inflater, container, false)
         return binding.root
     }
 

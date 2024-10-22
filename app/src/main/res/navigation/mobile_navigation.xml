@@ -27,5 +27,11 @@
         android:label="Tentang"
         tools:layout="@layout/fragment_tentang" />
 
+    <fragment
+        android:id="@+id/detailArtikel"
+        android:name="com.miniawradsantri.awrad.artikel.DetailArtikel"
+        android:label="Detail Artikel"
+        tools:layout="@layout/fragment_detail_artikel" />
+
 
 </navigation>

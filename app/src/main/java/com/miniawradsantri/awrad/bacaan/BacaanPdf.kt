@@ -10,6 +10,7 @@ import com.downloader.OnDownloadListener
 import com.downloader.PRDownloader
 import com.github.barteksc.pdfviewer.PDFView
 import com.google.firebase.storage.FirebaseStorage
+import com.miniawradsantri.awrad.MainActivity
 import com.miniawradsantri.awrad.databinding.FragmentBacaanPdfBinding
 import java.io.File
 
@@ -54,6 +55,12 @@ class BacaanPdf : Fragment() {
         return binding.root
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        val mainActivityBinding = (activity as? MainActivity)?.binding
+        mainActivityBinding?.navigation?.visibility = View.GONE
+
+    }
     private fun fetchPdfUrl() {
         Log.d("BacaanPdf", "Fetching PDF URL")
         val pdfRef = FirebaseStorage.getInstance().reference.child(path!!)
@@ -97,4 +104,12 @@ class BacaanPdf : Fragment() {
                 }
             })
     }
+
+    override fun onPause() {
+        super.onPause()
+        // Mengatur navigation menjadi visible lagi saat fragment tidak aktif
+        val mainActivityBinding = (activity as? MainActivity)?.binding
+        mainActivityBinding?.navigation?.visibility = View.VISIBLE
+    }
+
 }

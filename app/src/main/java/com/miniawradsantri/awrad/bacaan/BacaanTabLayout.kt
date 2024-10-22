@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.google.android.material.tabs.TabLayoutMediator
+import com.miniawradsantri.awrad.MainActivity
 import com.miniawradsantri.awrad.R
 import com.miniawradsantri.awrad.databinding.FragmentBacaanTabLayoutBinding
 
@@ -60,6 +61,9 @@ class BacaanTabLayout : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        val mainActivityBinding = (activity as? MainActivity)?.binding
+        mainActivityBinding?.navigation?.visibility = View.GONE
 
         parentFragmentManager.setFragmentResultListener("requestKey", this) { _, bundle ->
             val newTextSize = bundle.getInt("TEXT_SIZE")
@@ -134,6 +138,13 @@ class BacaanTabLayout : Fragment() {
         }
 
         return result.toString()
+    }
+
+    override fun onPause() {
+        super.onPause()
+        // Mengatur navigation menjadi visible lagi saat fragment tidak aktif
+        val mainActivityBinding = (activity as? MainActivity)?.binding
+        mainActivityBinding?.navigation?.visibility = View.VISIBLE
     }
 
 }

@@ -16,7 +16,7 @@ import com.miniawradsantri.awrad.databinding.FragmentEditTextSizeBinding
 
 class EditTextSize : Fragment() {
     private lateinit var binding: FragmentEditTextSizeBinding
-    private val MIN_TEXT_SIZE = 12
+    private val MIN_TEXT_SIZE = 16
     private val DEFAULT_TEXT_SIZE = 16
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -38,13 +38,14 @@ class EditTextSize : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val savedTextSize = loadTextSize()
+        Log.d("EditTextSize", "Saved text size: $savedTextSize")
         binding.editText.setTextSize(TypedValue.COMPLEX_UNIT_SP, savedTextSize.toFloat())
-        binding.seekBar.progress = savedTextSize - MIN_TEXT_SIZE
+        binding.seekBar.progress = (savedTextSize - MIN_TEXT_SIZE) / 6
 
         binding.seekBar.setOnSeekBarChangeListener(
             object : SeekBar.OnSeekBarChangeListener {
                 override fun onProgressChanged(p0: SeekBar?, p1: Int, p2: Boolean) {
-                    val textSize = p1 + MIN_TEXT_SIZE
+                    val textSize = p1 * 6 + MIN_TEXT_SIZE
                     binding.editText.setTextSize(TypedValue.COMPLEX_UNIT_SP, textSize.toFloat())
 
                 }
@@ -54,8 +55,8 @@ class EditTextSize : Fragment() {
                 }
 
                 override fun onStopTrackingTouch(p0: SeekBar?) {
-                    val textSize = p0?.progress?.plus(MIN_TEXT_SIZE)
-                    saveTextSize(textSize!!)
+                    val textSize = p0?.progress?.let { it * 6 + MIN_TEXT_SIZE } ?: MIN_TEXT_SIZE
+                    saveTextSize(textSize)
 
                     val resultBundle = Bundle()
                     resultBundle.putInt("TEXT_SIZE", textSize)

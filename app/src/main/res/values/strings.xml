@@ -178,4 +178,9 @@
     <string name="quotes">Quotes</string>
     <string name="tentang_aplikasi">Tentang Aplikasi</string>
     <string name="hubungi_kami">Hubungi Kami</string>
+    <string name="beranda">Beranda</string>
+    <string name="artikel">Artikel</string>
+    <string name="tentang">Tentang</string>
+    <string name="example_text">بِسۡمِ ٱللَّهِ ٱلرَّحۡمَٰنِ ٱلرَّحِيمِ</string>
+    <string name="ukuran_teks">Ukuran Teks</string>
 </resources>

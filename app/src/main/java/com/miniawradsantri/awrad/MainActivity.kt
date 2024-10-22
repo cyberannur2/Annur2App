@@ -1,6 +1,8 @@
 package com.miniawradsantri.awrad
 
 import android.os.Bundle
+import android.view.View
+import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
@@ -10,7 +12,7 @@ import com.miniawradsantri.awrad.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityMainBinding
+    lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,17 +28,5 @@ class MainActivity : AppCompatActivity() {
         navView.setupWithNavController(navController)
 
     }
-
-//    override fun onBackPressed() {
-//        val fragmentManager = supportFragmentManager
-//        if (fragmentManager.backStackEntryCount > 0) {
-//            // Jika ada fragment di back stack, pop fragment tersebut
-//            fragmentManager.popBackStack()
-//        } else {
-//            // Jika tidak ada fragment di back stack, keluar dari aplikasi
-//            super.onBackPressed()
-//        }
-//    }
-
 
 }

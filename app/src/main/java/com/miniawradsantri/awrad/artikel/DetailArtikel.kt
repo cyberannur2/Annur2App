@@ -16,8 +16,7 @@ import com.miniawradsantri.awrad.databinding.FragmentDetailArtikelBinding
 
 class DetailArtikel : Fragment() {
 
-    private var _binding: FragmentDetailArtikelBinding? = null
-    private val binding get() = _binding!!
+    private lateinit var binding: FragmentDetailArtikelBinding
 
 
     override fun onCreateView(
@@ -25,19 +24,19 @@ class DetailArtikel : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         // Inflate the layout for this fragment
-        _binding = FragmentDetailArtikelBinding.inflate(inflater, container, false)
+        binding = FragmentDetailArtikelBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         // Setup Toolbar
-        val toolbar = binding.root.findViewById<androidx.appcompat.widget.Toolbar>(R.id.toolbar)
-        (activity as? AppCompatActivity)?.setSupportActionBar(toolbar)
-        toolbar.setNavigationOnClickListener {
-            // Handle back navigation
-            requireActivity().onBackPressedDispatcher.onBackPressed()
-        }
+//        val toolbar = binding.root.findViewById<androidx.appcompat.widget.Toolbar>(R.id.toolbar)
+//        (activity as? AppCompatActivity)?.setSupportActionBar(toolbar)
+//        toolbar.setNavigationOnClickListener {
+//            // Handle back navigation
+//            requireActivity().onBackPressedDispatcher.onBackPressed()
+//        }
         // Start shimmer animation
 //        binding.shimmerViewContainer.startShimmer()
         arguments?.let { bundle ->
@@ -110,11 +109,11 @@ class DetailArtikel : Fragment() {
             }
         }
 
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
-    }
+//
+//    override fun onDestroyView() {
+//        super.onDestroyView()
+//        binding = null
+//    }
 
 
 }

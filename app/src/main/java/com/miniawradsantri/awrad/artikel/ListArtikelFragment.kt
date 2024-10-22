@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.miniawradsantri.awrad.R
 import com.miniawradsantri.awrad.adapter.ArticleAdapter
 import com.miniawradsantri.awrad.databinding.FragmentListArtikelBinding
+import com.miniawradsantri.awrad.databinding.FragmentListArtikelHomeBinding
 import com.miniawradsantri.awrad.entities.ArticleEntity
 import com.miniawradsantri.awrad.model.Article
 import com.miniawradsantri.awrad.model.Content
@@ -21,7 +22,7 @@ import com.miniawradsantri.awrad.viewmodel.ArtikelViewModel
 
 
 class ListArtikelFragment : Fragment() {
-    private var _binding: FragmentListArtikelBinding? = null
+    private var _binding: FragmentListArtikelHomeBinding? = null
     private val binding get() = _binding!!
 
     private val viewModel: ArtikelViewModel by viewModels()
@@ -31,7 +32,7 @@ class ListArtikelFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentListArtikelBinding.inflate(inflater, container, false)
+        _binding = FragmentListArtikelHomeBinding.inflate(inflater, container, false)
         // Inflate the layout for this fragment
         return binding.root
     }
