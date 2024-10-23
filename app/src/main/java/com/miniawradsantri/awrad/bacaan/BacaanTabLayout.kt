@@ -89,6 +89,11 @@ class BacaanTabLayout : Fragment() {
                 .commit()
         }
 
+        binding.btnBack.setOnClickListener {
+            Log.d("Button Back", "Button Back icon clicked")
+            parentFragmentManager.popBackStack()
+        }
+
 
     }
 

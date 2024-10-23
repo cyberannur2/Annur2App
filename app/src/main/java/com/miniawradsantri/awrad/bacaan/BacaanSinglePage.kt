@@ -8,6 +8,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
 import com.miniawradsantri.awrad.MainActivity
 import com.miniawradsantri.awrad.R
 import com.miniawradsantri.awrad.databinding.ActivityMainBinding
@@ -64,6 +66,11 @@ class BacaanSinglePage : Fragment() {
                 .replace(R.id.fragment_bacaan_single_page, EditTextSize())
                 .addToBackStack(null)
                 .commit()
+        }
+
+        binding.btnBack.setOnClickListener {
+            Log.d("Button Back", "Button Back icon clicked")
+            parentFragmentManager.popBackStack()
         }
 
         binding.title.text = title

@@ -3,6 +3,7 @@ package com.miniawradsantri.awrad.artikel
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -29,15 +30,7 @@ class DetailArtikel : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        // Setup Toolbar
-//        val toolbar = binding.root.findViewById<androidx.appcompat.widget.Toolbar>(R.id.toolbar)
-//        (activity as? AppCompatActivity)?.setSupportActionBar(toolbar)
-//        toolbar.setNavigationOnClickListener {
-//            // Handle back navigation
-//            requireActivity().onBackPressedDispatcher.onBackPressed()
-//        }
-        // Start shimmer animation
-//        binding.shimmerViewContainer.startShimmer()
+
         arguments?.let { bundle ->
 
             val articleUrl = bundle.getString("articleUrl")
@@ -104,7 +97,10 @@ class DetailArtikel : Fragment() {
                 }
                 loadUrl(articleUrl ?: "")
             }
-
+            binding.btnBack.setOnClickListener {
+                Log.d("Button Back", "Button Back icon clicked")
+                parentFragmentManager.popBackStack()
+            }
             }
         }
 

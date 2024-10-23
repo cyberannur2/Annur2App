@@ -59,7 +59,10 @@ class BacaanPdf : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val mainActivityBinding = (activity as? MainActivity)?.binding
         mainActivityBinding?.navigation?.visibility = View.GONE
-
+        binding.btnBack.setOnClickListener {
+            Log.d("Button Back", "Button Back icon clicked")
+            parentFragmentManager.popBackStack()
+        }
     }
     private fun fetchPdfUrl() {
         Log.d("BacaanPdf", "Fetching PDF URL")
