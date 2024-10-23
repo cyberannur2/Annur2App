@@ -99,6 +99,8 @@ dependencies {
     implementation (libs.shimmer)
 
     //Pdf Viewer
-    implementation("com.github.DImuthuUpe:AndroidPdfViewer:3.1.0-beta.1")
-    implementation("com.github.amitshekhariitbhu:PRDownloader:1.0.1")
+    implementation(libs.androidpdfviewer)
+    implementation(libs.prdownloader)
+
+//    implementation("dev.chrisbanes.insetter:insetter-ktx:0.6.1")
 }

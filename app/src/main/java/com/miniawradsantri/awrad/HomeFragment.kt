@@ -90,7 +90,8 @@ class HomeFragment : Fragment() {
                     R.id.frame_home,
                     BacaanTabLayout.newInstance(
                         getString(R.string.yasin_tahlil),
-                        tabTitles)
+                        tabTitles
+                    )
                 )
                 .addToBackStack(null)
                 .commit()
@@ -108,7 +109,8 @@ class HomeFragment : Fragment() {
                     R.id.frame_home,
                     BacaanTabLayout.newInstance(
                         getString(R.string.al_waqiah),
-                        tabTitles)
+                        tabTitles
+                    )
                 )
                 .addToBackStack(null)
                 .commit()
@@ -140,7 +142,8 @@ class HomeFragment : Fragment() {
                     R.id.frame_home,
                     BacaanTabLayout.newInstance(
                         getString(R.string.istighosah),
-                        tabTitles)
+                        tabTitles
+                    )
                 )
                 .addToBackStack(null)
                 .commit()
@@ -149,7 +152,58 @@ class HomeFragment : Fragment() {
         // Burdah
         binding.includeBacaan.icBurdah.setOnClickListener {
             fragmentManager.beginTransaction()
-                .replace(R.id.frame_home, BacaanPdf.newInstance("Qasidah Burdah", "burdah/burdah.pdf"))
+                .replace(
+                    R.id.frame_home,
+                    BacaanPdf.newInstance("Qasidah Burdah", "burdah/burdah.pdf")
+                )
+                .addToBackStack(null)
+                .commit()
+        }
+
+        // Maulid Diba
+        binding.includeBacaan.icDiba.setOnClickListener {
+            val bacaanTabLayout = BacaanTabLayout()
+            val tabTitles = arrayListOf(
+                "Ya Rabbi Shalli...",
+                "Laqod Jaakum...",
+                "Ya Rasulallah...",
+                "Al-hamdulillahil Qawiyy...",
+                "Qila Huwa Adam...",
+                "Yub'atsu Min Tihamah...",
+                "Tsumma Arudduhu...",
+                "Shalatullahi Ma Lahat...",
+                "Fasubhanaman Khashahu...",
+                "Awwaluma Nastaftihu...",
+                "Al-haditsul Awwal...",
+                "Al-haditsus Tsani...",
+                "Fayaqulul Haqqu...",
+                "Ahdliru Qulubakum...",
+                "Fahtazzal Arsyu...",
+                "Mahallul Qiyam",
+                "Wawulida Shallallahu...",
+                "Qila Man Yakfulu...",
+                "Tsumma A'radla...",
+                "Fabainama Huwa...",
+                "Faqolatil Malaikatu...",
+                "Fabainama Habibu...",
+                "Falamma Ra`athu...",
+                "Wakana Shallallahu...",
+                "Waqila Liba'dhihim...",
+                "Wama 'Asa...",
+                "Ya Badratim...",
+                "Doa Maulid Diba'"
+                )
+            val bundle = Bundle()
+            bundle.putStringArrayList("TAB_TITLES", tabTitles)
+            bacaanTabLayout.arguments = bundle
+            fragmentManager.beginTransaction()
+                .replace(
+                    R.id.frame_home,
+                    BacaanTabLayout.newInstance(
+                        getString(R.string.maulid_diba),
+                        tabTitles
+                    )
+                )
                 .addToBackStack(null)
                 .commit()
         }
@@ -193,7 +247,8 @@ class HomeFragment : Fragment() {
                     R.id.frame_home,
                     BacaanTabLayout.newInstance(
                         getString(R.string.yasin_tahlil),
-                        tabTitles)
+                        tabTitles
+                    )
                 )
                 .addToBackStack(null)
                 .commit()
@@ -212,7 +267,8 @@ class HomeFragment : Fragment() {
                     R.id.frame_home,
                     BacaanTabLayout.newInstance(
                         getString(R.string.al_waqiah),
-                        tabTitles)
+                        tabTitles
+                    )
                 )
                 .addToBackStack(null)
                 .commit()
@@ -246,7 +302,8 @@ class HomeFragment : Fragment() {
                     R.id.frame_home,
                     BacaanTabLayout.newInstance(
                         getString(R.string.istighosah),
-                        tabTitles)
+                        tabTitles
+                    )
                 )
                 .addToBackStack(null)
                 .commit()
@@ -256,7 +313,59 @@ class HomeFragment : Fragment() {
         bindingBottomSheet.icBurdah.setOnClickListener {
             dialog.dismiss()
             fragmentManager.beginTransaction()
-                .replace(R.id.frame_home, BacaanPdf.newInstance("Qasidah Burdah", "burdah/burdah.pdf"))
+                .replace(
+                    R.id.frame_home,
+                    BacaanPdf.newInstance("Qasidah Burdah", "burdah/burdah.pdf")
+                )
+                .addToBackStack(null)
+                .commit()
+        }
+
+        // Maulid Diba
+        bindingBottomSheet.icDiba.setOnClickListener {
+            val bacaanTabLayout = BacaanTabLayout()
+            val tabTitles = arrayListOf(
+                "Ya Rabbi Shalli...",
+                "Laqod Jaakum...",
+                "Ya Rasulallah...",
+                "Al-hamdulillahil Qawiyy...",
+                "Qila Huwa Adam...",
+                "Yub'atsu Min Tihamah...",
+                "Tsumma Arudduhu...",
+                "Shalatullahi Ma Lahat...",
+                "Fasubhanaman Khashahu...",
+                "Awwaluma Nastaftihu...",
+                "Al-haditsul Awwal...",
+                "Al-haditsus Tsani...",
+                "Fayaqulul Haqqu...",
+                "Ahdliru Qulubakum...",
+                "Fahtazzal Arsyu...",
+                "Mahallul Qiyam",
+                "Wawulida Shallallahu...",
+                "Qila Man Yakfulu...",
+                "Tsumma A'radla...",
+                "Fabainama Huwa...",
+                "Faqolatil Malaikatu...",
+                "Fabainama Habibu...",
+                "Falamma Ra`athu...",
+                "Wakana Shallallahu...",
+                "Waqila Liba'dhihim...",
+                "Wama 'Asa...",
+                "Ya Badratim...",
+                "Doa Maulid Diba'"
+            )
+            val bundle = Bundle()
+            bundle.putStringArrayList("TAB_TITLES", tabTitles)
+            bacaanTabLayout.arguments = bundle
+            dialog.dismiss()
+            fragmentManager.beginTransaction()
+                .replace(
+                    R.id.frame_home,
+                    BacaanTabLayout.newInstance(
+                        getString(R.string.maulid_diba),
+                        tabTitles
+                    )
+                )
                 .addToBackStack(null)
                 .commit()
         }
@@ -264,7 +373,15 @@ class HomeFragment : Fragment() {
         // Sab'ul Munjiyat
         bindingBottomSheet.icSabulMunjiyat.setOnClickListener {
             val bacaanTabLayout = BacaanTabLayout()
-            val tabTitles = arrayListOf("As-Sajdah", "Yasin", "Fushilat", "Ad-Dukhon", "Al-Waqiah", "Al-Hasyr", "Al-Mulk")
+            val tabTitles = arrayListOf(
+                "As-Sajdah",
+                "Yasin",
+                "Fushilat",
+                "Ad-Dukhon",
+                "Al-Waqiah",
+                "Al-Hasyr",
+                "Al-Mulk"
+            )
             val bundle = Bundle()
             bundle.putStringArrayList("TAB_TITLES", tabTitles)
             bacaanTabLayout.arguments = bundle
@@ -274,14 +391,13 @@ class HomeFragment : Fragment() {
                     R.id.frame_home,
                     BacaanTabLayout.newInstance(
                         getString(R.string.sab_ul_munjiyat),
-                        tabTitles)
+                        tabTitles
+                    )
                 )
                 .addToBackStack(null)
                 .commit()
         }
     }
-
-
 
 
 }

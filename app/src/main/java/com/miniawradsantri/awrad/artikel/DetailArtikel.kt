@@ -8,7 +8,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.webkit.WebView
 import android.webkit.WebViewClient
-import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.miniawradsantri.awrad.R
 import com.miniawradsantri.awrad.databinding.FragmentDetailArtikelBinding
@@ -49,7 +48,7 @@ class DetailArtikel : Fragment() {
                 settings.domStorageEnabled = true
                 settings.loadsImagesAutomatically = true
                 settings.minimumFontSize = 14
-                settings.fixedFontFamily = R.font.poppins.toString()
+                settings.fixedFontFamily = R.font.roboto.toString()
 //                settings.cacheMode = WebSettings.LOAD_CACHE_ELSE_NETWORK
                 // Set WebViewClient to handle navigation and inject JavaScript
                 webViewClient = object : WebViewClient() {

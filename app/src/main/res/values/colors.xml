@@ -10,4 +10,5 @@
     <color name="grey">#5E5E5E</color>
     <color name="nav_selected">#4494F0</color>
     <color name="nav_unselected">#787878</color>
+    <color name="whiteTrans">#8CFFFFFF</color>
 </resources>

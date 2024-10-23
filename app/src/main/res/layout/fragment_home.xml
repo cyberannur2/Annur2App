@@ -44,14 +44,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                app:layout_constraintGuide_begin="150dp" />
+                app:layout_constraintGuide_begin="180dp" />
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/top_home_guidelane"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                app:layout_constraintGuide_begin="100dp" />
+                app:layout_constraintGuide_begin="130dp" />
 
 
             <com.google.android.material.imageview.ShapeableImageView
@@ -158,7 +158,7 @@
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
-                    android:fontFamily="@font/poppins"
+                    android:fontFamily="@font/roboto"
                     android:text="@string/agenda_terdekat"
                     android:textSize="14sp"
                     android:textColor="@color/black"
@@ -168,15 +168,15 @@
                     app:layout_constraintTop_toTopOf="@id/layout_agenda" />
 
 
-                <ImageButton
-                    android:id="@+id/imageButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="#00000000"
-                    android:src="@drawable/ic_right"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="@+id/layout_agenda"
-                    app:layout_constraintTop_toTopOf="parent" />
+<!--                <ImageButton-->
+<!--                    android:id="@+id/imageButton"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:backgroundTint="#00000000"-->
+<!--                    android:src="@drawable/ic_right"-->
+<!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                    app:layout_constraintEnd_toEndOf="@+id/layout_agenda"-->
+<!--                    app:layout_constraintTop_toTopOf="parent" />-->
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -222,7 +222,7 @@
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
-                    android:fontFamily="@font/poppins"
+                    android:fontFamily="@font/roboto"
                     android:text="@string/artikel_terbaru"
                     android:textColor="@color/black"
                     android:textSize="14sp"
@@ -232,15 +232,15 @@
                     app:layout_constraintTop_toTopOf="@id/layout_artikel" />
 
 
-                <ImageButton
-                    android:id="@+id/imageButton2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="#00000000"
-                    android:src="@drawable/ic_right"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="@+id/layout_artikel"
-                    app:layout_constraintTop_toTopOf="parent" />
+<!--                <ImageButton-->
+<!--                    android:id="@+id/imageButton2"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:backgroundTint="#00000000"-->
+<!--                    android:src="@drawable/ic_right"-->
+<!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                    app:layout_constraintEnd_toEndOf="@+id/layout_artikel"-->
+<!--                    app:layout_constraintTop_toTopOf="parent" />-->
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -260,7 +260,7 @@
             <!--                <TextView-->
             <!--                    android:layout_width="200dp"-->
             <!--                    android:layout_height="wrap_content"-->
-            <!--                    android:fontFamily="@font/poppins"-->
+            <!--                    android:fontFamily="@font/roboto"-->
             <!--                    android:text="www"-->
             <!--                    android:textSize="14sp"-->
             <!--                    android:textStyle="bold" />-->
@@ -309,7 +309,7 @@
 <!--                    android:layout_width="200dp"-->
 <!--                    android:layout_height="wrap_content"-->
 <!--                    android:layout_marginStart="8dp"-->
-<!--                    android:fontFamily="@font/poppins"-->
+<!--                    android:fontFamily="@font/roboto"-->
 <!--                    android:text="@string/quotes"-->
 <!--                    android:textSize="14sp"-->
 <!--                    android:textStyle="bold"-->
@@ -360,7 +360,7 @@
 <!--                    android:layout_width="200dp"-->
 <!--                    android:layout_height="wrap_content"-->
 <!--                    android:layout_marginStart="8dp"-->
-<!--                    android:fontFamily="@font/poppins"-->
+<!--                    android:fontFamily="@font/roboto"-->
 <!--                    android:text="@string/video_terbaru"-->
 <!--                    android:textSize="14sp"-->
 <!--                    android:textStyle="bold"-->
