@@ -43,8 +43,8 @@
 
     <ImageView
         android:id="@+id/btn_edit_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="8dp"
         android:clickable="true"
@@ -67,7 +67,7 @@
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:background="@drawable/bg_banner"
-        android:paddingHorizontal="3dp"
+        android:paddingHorizontal="1dp"
         app:layout_constraintEnd_toEndOf="@+id/view4"
         app:layout_constraintStart_toStartOf="@+id/view4"
         app:layout_constraintTop_toTopOf="@+id/view4"

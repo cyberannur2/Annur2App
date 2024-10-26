@@ -50,6 +50,12 @@
         app:layout_constraintTop_toTopOf="@id/v_kategori"
         tools:text="@string/umum" />
 
+<!--    <ImageView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:src="@drawable/ic_time"-->
+<!--        app:layout_constraintStart_toStartOf="@id/view"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/iv_agenda"/>-->
     <TextView
         android:id="@+id/tanggal"
         android:layout_width="wrap_content"
