@@ -232,60 +232,60 @@
         app:layout_constraintStart_toStartOf="@+id/ic_sabul_munjiyat"
         app:layout_constraintTop_toBottomOf="@+id/ic_sabul_munjiyat" />
 
-    <ImageView
-        android:id="@+id/ic_kitab_syiir"
-        android:layout_width="46dp"
-        android:layout_height="46dp"
-        android:layout_marginTop="16dp"
-        android:clickable="true"
-        android:contentDescription="@string/kitab_syi_ir"
-        android:src="@drawable/ic_kitab_syiir"
-        app:layout_constraintEnd_toEndOf="@+id/ic_burdah"
-        app:layout_constraintStart_toStartOf="@+id/ic_burdah"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+<!--    <ImageView-->
+<!--        android:id="@+id/ic_kitab_syiir"-->
+<!--        android:layout_width="46dp"-->
+<!--        android:layout_height="46dp"-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        android:clickable="true"-->
+<!--        android:contentDescription="@string/kitab_syi_ir"-->
+<!--        android:src="@drawable/ic_kitab_syiir"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/ic_burdah"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/ic_burdah"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/textView4" />-->
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:fontFamily="@font/roboto"
-        android:text="@string/kitab_syi_ir"
-        android:textColor="@color/black"
-        android:textSize="11sp"
-        app:layout_constraintEnd_toEndOf="@+id/ic_kitab_syiir"
-        app:layout_constraintStart_toStartOf="@+id/ic_kitab_syiir"
-        app:layout_constraintTop_toBottomOf="@+id/ic_kitab_syiir" />
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:fontFamily="@font/roboto"-->
+<!--        android:text="@string/kitab_syi_ir"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textSize="11sp"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/ic_kitab_syiir"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/ic_kitab_syiir"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/ic_kitab_syiir" />-->
 
-    <ImageView
-        android:id="@+id/ic_dalail"
-        android:layout_width="46dp"
-        android:layout_height="46dp"
-        android:clickable="true"
-        android:contentDescription="@string/dalailul_khoirot"
-        android:src="@drawable/ic_dalail"
-        app:layout_constraintEnd_toEndOf="@+id/ic_diba"
-        app:layout_constraintStart_toStartOf="@+id/ic_diba"
-        app:layout_constraintTop_toTopOf="@+id/ic_kitab_syiir" />
+<!--    <ImageView-->
+<!--        android:id="@+id/ic_dalail"-->
+<!--        android:layout_width="46dp"-->
+<!--        android:layout_height="46dp"-->
+<!--        android:clickable="true"-->
+<!--        android:contentDescription="@string/dalailul_khoirot"-->
+<!--        android:src="@drawable/ic_dalail"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/ic_diba"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/ic_diba"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/ic_kitab_syiir" />-->
 
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:fontFamily="@font/roboto"
-        android:text="@string/dalailul_khoirot"
-        android:textColor="@color/black"
-        android:textSize="11sp"
-        app:layout_constraintEnd_toEndOf="@+id/ic_dalail"
-        app:layout_constraintStart_toStartOf="@+id/ic_dalail"
-        app:layout_constraintTop_toBottomOf="@+id/ic_dalail" />
+<!--    <TextView-->
+<!--        android:id="@+id/textView5"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:fontFamily="@font/roboto"-->
+<!--        android:text="@string/dalailul_khoirot"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textSize="11sp"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/ic_dalail"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/ic_dalail"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/ic_dalail" />-->
 
     <Space
         android:layout_width="match_parent"
         android:layout_height="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

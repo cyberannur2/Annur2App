@@ -59,10 +59,10 @@ class HomeFragment : Fragment() {
             .replace(R.id.fragment_article_list_container, ListArtikelFragment())
             .commit()
 
-        // Show Bottom Sheet
-        binding.includeBacaan.icLainnya.setOnClickListener {
-            showBottomSheet()
-        }
+//        // Show Bottom Sheet
+//        binding.includeBacaan.icLainnya.setOnClickListener {
+//            showBottomSheet()
+//        }
 
         // Tawassul
         binding.includeBacaan.icTawassul.setOnClickListener {
@@ -201,6 +201,33 @@ class HomeFragment : Fragment() {
                     R.id.frame_home,
                     BacaanTabLayout.newInstance(
                         getString(R.string.maulid_diba),
+                        tabTitles
+                    )
+                )
+                .addToBackStack(null)
+                .commit()
+        }
+
+        // Sab'ul Munjiyat
+        binding.includeBacaan.icSabulMunjiyat.setOnClickListener {
+            val bacaanTabLayout = BacaanTabLayout()
+            val tabTitles = arrayListOf(
+                "As-Sajdah",
+                "Yasin",
+                "Fushilat",
+                "Ad-Dukhon",
+                "Al-Waqiah",
+                "Al-Hasyr",
+                "Al-Mulk"
+            )
+            val bundle = Bundle()
+            bundle.putStringArrayList("TAB_TITLES", tabTitles)
+            bacaanTabLayout.arguments = bundle
+            fragmentManager.beginTransaction()
+                .replace(
+                    R.id.frame_home,
+                    BacaanTabLayout.newInstance(
+                        getString(R.string.sab_ul_munjiyat),
                         tabTitles
                     )
                 )
