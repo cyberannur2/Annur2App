@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dalail"
+    tools:context=".bacaan.DalailFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <View
+            android:id="@+id/view3"
+            android:layout_width="match_parent"
+            android:layout_height="88dp"
+            android:background="@color/blue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
+            android:src="@drawable/btn_back"
+            app:layout_constraintBottom_toBottomOf="@+id/view3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/view3" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/roboto"
+            android:textColor="@color/white"
+            android:text="@string/dalailul_khoirot"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/view3"
+            app:layout_constraintEnd_toEndOf="@+id/view3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/view3" />
+
+        <!--    Dalailul Khairat Hari Ahad-->
+        <View
+            android:id="@+id/v_ahad"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/bg_view"
+            android:elevation="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view3" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/roboto"
+            android:text="Dalailul Khairat Hari Ahad"
+            android:textColor="@color/black"
+            android:elevation="5dp"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/v_ahad"
+            app:layout_constraintStart_toStartOf="@+id/v_ahad"
+            app:layout_constraintTop_toTopOf="@+id/v_ahad" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="5dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ic_right"
+            app:layout_constraintBottom_toBottomOf="@+id/v_ahad"
+            app:layout_constraintEnd_toEndOf="@+id/v_ahad"
+            app:layout_constraintTop_toTopOf="@+id/v_ahad" />
+
+        <!--    Dalailul Khairat Hari Senin-->
+        <View
+            android:id="@+id/v_senin"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/bg_view"
+            android:elevation="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/v_ahad" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/roboto"
+            android:text="Dalailul Khairat Hari Senin"
+            android:textColor="@color/black"
+            android:elevation="5dp"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/v_senin"
+            app:layout_constraintStart_toStartOf="@+id/v_senin"
+            app:layout_constraintTop_toTopOf="@+id/v_senin" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="5dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ic_right"
+            app:layout_constraintBottom_toBottomOf="@+id/v_senin"
+            app:layout_constraintEnd_toEndOf="@+id/v_senin"
+            app:layout_constraintTop_toTopOf="@+id/v_senin" />
+
+        <!--    Dalailul Khairat Hari Selasa-->
+        <View
+            android:id="@+id/v_selasa"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/bg_view"
+            android:elevation="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/v_senin" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/roboto"
+            android:text="Dalailul Khairat Hari Selasa"
+            android:textColor="@color/black"
+            android:elevation="5dp"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/v_selasa"
+            app:layout_constraintStart_toStartOf="@+id/v_selasa"
+            app:layout_constraintTop_toTopOf="@+id/v_selasa" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="5dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ic_right"
+            app:layout_constraintBottom_toBottomOf="@+id/v_selasa"
+            app:layout_constraintEnd_toEndOf="@+id/v_selasa"
+            app:layout_constraintTop_toTopOf="@+id/v_selasa" />
+
+        <!--    Dalailul Khairat Hari Rabu-->
+        <View
+            android:id="@+id/v_rabu"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/bg_view"
+            android:elevation="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/v_selasa" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/roboto"
+            android:text="Dalailul Khairat Hari Rabu"
+            android:textColor="@color/black"
+            android:elevation="5dp"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/v_rabu"
+            app:layout_constraintStart_toStartOf="@+id/v_rabu"
+            app:layout_constraintTop_toTopOf="@+id/v_rabu" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="5dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ic_right"
+            app:layout_constraintBottom_toBottomOf="@+id/v_rabu"
+            app:layout_constraintEnd_toEndOf="@+id/v_rabu"
+            app:layout_constraintTop_toTopOf="@+id/v_rabu" />
+
+        <!--    Dalailul Khairat Hari Kamis-->
+        <View
+            android:id="@+id/v_kamis"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/bg_view"
+            android:elevation="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/v_rabu" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/roboto"
+            android:text="Dalailul Khairat Hari Kamis"
+            android:textColor="@color/black"
+            android:elevation="5dp"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/v_kamis"
+            app:layout_constraintStart_toStartOf="@+id/v_kamis"
+            app:layout_constraintTop_toTopOf="@+id/v_kamis" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="5dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ic_right"
+            app:layout_constraintBottom_toBottomOf="@+id/v_kamis"
+            app:layout_constraintEnd_toEndOf="@+id/v_kamis"
+            app:layout_constraintTop_toTopOf="@+id/v_kamis" />
+
+        <!--    Dalailul Khairat Hari Jumat-->
+        <View
+            android:id="@+id/v_jumat"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/bg_view"
+            android:elevation="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/v_kamis" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/roboto"
+            android:text="Dalailul Khairat Hari Jumat"
+            android:textColor="@color/black"
+            android:elevation="5dp"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/v_jumat"
+            app:layout_constraintStart_toStartOf="@+id/v_jumat"
+            app:layout_constraintTop_toTopOf="@+id/v_jumat" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="5dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ic_right"
+            app:layout_constraintBottom_toBottomOf="@+id/v_jumat"
+            app:layout_constraintEnd_toEndOf="@+id/v_jumat"
+            app:layout_constraintTop_toTopOf="@+id/v_jumat" />
+
+        <!--    Dalailul Khairat Hari Sabtu-->
+        <View
+            android:id="@+id/v_sabtu"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="32dp"
+            android:background="@drawable/bg_view"
+            android:elevation="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/v_jumat" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/roboto"
+            android:text="Dalailul Khairat Hari Sabtu"
+            android:textColor="@color/black"
+            android:elevation="5dp"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/v_sabtu"
+            app:layout_constraintStart_toStartOf="@+id/v_sabtu"
+            app:layout_constraintTop_toTopOf="@+id/v_sabtu" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="5dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ic_right"
+            app:layout_constraintBottom_toBottomOf="@+id/v_sabtu"
+            app:layout_constraintEnd_toEndOf="@+id/v_sabtu"
+            app:layout_constraintTop_toTopOf="@+id/v_sabtu" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</FrameLayout>

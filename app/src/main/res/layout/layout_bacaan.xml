@@ -151,7 +151,7 @@
         android:clickable="true"
         android:src="@drawable/ic_diba"
         app:layout_constraintBottom_toBottomOf="@+id/ic_burdah"
-        app:layout_constraintEnd_toStartOf="@+id/ic_sabul_munjiyat"
+        app:layout_constraintEnd_toStartOf="@+id/ic_lainnya"
         app:layout_constraintStart_toEndOf="@+id/ic_burdah"
         app:layout_constraintTop_toTopOf="@+id/ic_burdah" />
 
@@ -167,55 +167,55 @@
         app:layout_constraintStart_toStartOf="@+id/ic_diba"
         app:layout_constraintTop_toBottomOf="@+id/ic_diba" />
 
-<!--    <ImageView-->
-<!--        android:id="@+id/ic_lainnya"-->
-<!--        android:layout_width="46dp"-->
-<!--        android:layout_height="46dp"-->
-<!--        android:layout_marginStart="24dp"-->
-<!--        android:clickable="true"-->
-<!--        android:src="@drawable/ic_lainnya"-->
-<!--        app:layout_constraintBottom_toBottomOf="@+id/ic_diba"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toEndOf="@+id/ic_diba"-->
-<!--        app:layout_constraintTop_toTopOf="@+id/ic_diba" />-->
-
-<!--    <TextView-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginTop="8dp"-->
-<!--        android:fontFamily="@font/roboto"-->
-<!--        android:text="@string/lainnya"-->
-<!--        android:textColor="@color/black"-->
-<!--        android:textSize="11sp"-->
-<!--        app:layout_constraintEnd_toEndOf="@+id/ic_lainnya"-->
-<!--        app:layout_constraintStart_toStartOf="@+id/ic_lainnya"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/ic_lainnya" />-->
-
     <ImageView
-        android:id="@+id/ic_sabul_munjiyat"
+        android:id="@+id/ic_lainnya"
         android:layout_width="46dp"
         android:layout_height="46dp"
         android:layout_marginStart="24dp"
         android:clickable="true"
-        android:contentDescription="@string/sab_ul_munjiyat"
-        android:src="@drawable/ic_sabul_munjiyat"
+        android:src="@drawable/ic_lainnya"
         app:layout_constraintBottom_toBottomOf="@+id/ic_diba"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/ic_diba"
         app:layout_constraintTop_toTopOf="@+id/ic_diba" />
 
     <TextView
-        android:id="@+id/textView13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/roboto"
-        android:text="@string/sab_ul_munjiyat"
+        android:text="@string/lainnya"
         android:textColor="@color/black"
         android:textSize="11sp"
-        app:layout_constraintEnd_toEndOf="@+id/ic_sabul_munjiyat"
-        app:layout_constraintStart_toStartOf="@+id/ic_sabul_munjiyat"
-        app:layout_constraintTop_toBottomOf="@+id/ic_sabul_munjiyat" />
+        app:layout_constraintEnd_toEndOf="@+id/ic_lainnya"
+        app:layout_constraintStart_toStartOf="@+id/ic_lainnya"
+        app:layout_constraintTop_toBottomOf="@+id/ic_lainnya" />
+
+<!--    <ImageView-->
+<!--        android:id="@+id/ic_sabul_munjiyat"-->
+<!--        android:layout_width="46dp"-->
+<!--        android:layout_height="46dp"-->
+<!--        android:layout_marginStart="24dp"-->
+<!--        android:clickable="true"-->
+<!--        android:contentDescription="@string/sab_ul_munjiyat"-->
+<!--        android:src="@drawable/ic_sabul_munjiyat"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/ic_diba"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/ic_diba"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/ic_diba" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/textView13"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:fontFamily="@font/roboto"-->
+<!--        android:text="@string/sab_ul_munjiyat"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textSize="11sp"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/ic_sabul_munjiyat"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/ic_sabul_munjiyat"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/ic_sabul_munjiyat" />-->
 
 
 

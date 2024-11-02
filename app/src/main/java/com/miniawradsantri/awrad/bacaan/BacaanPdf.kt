@@ -80,24 +80,31 @@ class BacaanPdf : Fragment() {
     private fun loadPdf(pdfUrl: String) {
         binding.pdfProgressBar.progress = View.VISIBLE
         Log.d("PdfViewerFragment", "Starting download for PDF: $pdfUrl")
+
         // Download file PDF ke cache
         PRDownloader.download(pdfUrl, requireContext().cacheDir.path, "temp.pdf")
             .build()
             .start(object : OnDownloadListener {
                 override fun onDownloadComplete() {
-                    binding.pdfProgressBar.progress = View.GONE
-                    Log.d("PdfViewerFragment", "PDF download completed.")
-                    val file = File(requireContext().cacheDir, "temp.pdf")
-                    // Load PDF file ke dalam PDFView
-                    if (file.exists()) {
-                        Log.d("BacaanPdf", "PDF file exists at: ${file.absolutePath}")
-                        pdfView.fromFile(file)
-                            .enableSwipe(true)
-                            .swipeHorizontal(false)
-                            .enableDoubletap(true)
-                            .load()
-                    } else {
-                        Log.e("BacaanPdf", "PDF file does not exist.")
+                    // Pastikan fragment masih attached ke context
+                    context?.let { ctx ->
+                        binding.pdfProgressBar.progress = View.GONE
+                        Log.d("PdfViewerFragment", "PDF download completed.")
+                        val file = File(ctx.cacheDir, "temp.pdf")
+
+                        // Load PDF file ke dalam PDFView
+                        if (file.exists()) {
+                            Log.d("BacaanPdf", "PDF file exists at: ${file.absolutePath}")
+                            pdfView.fromFile(file)
+                                .enableSwipe(true)
+                                .swipeHorizontal(false)
+                                .enableDoubletap(true)
+                                .load()
+                        } else {
+                            Log.e("BacaanPdf", "PDF file does not exist.")
+                        }
+                    } ?: run {
+                        Log.d("BacaanPdf", "Fragment not attached to context during download complete.")
                     }
                 }
 
