@@ -90,6 +90,7 @@
         android:fontFamily="@font/roboto"
         android:text="12 Juni 2024"
         android:textSize="10sp"
+        android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="@+id/tv_title"
         app:layout_constraintTop_toBottomOf="@+id/tv_title" />
 

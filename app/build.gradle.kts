@@ -12,10 +12,10 @@ android {
 
     defaultConfig {
         applicationId = "com.miniawradsantri.awrad"
-        minSdk = 34
+        minSdk = 24
         targetSdk = 34
-        versionCode = 15
-        versionName = "3.0.0"
+        versionCode = 17
+        versionName = "3.0.1"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         ksp {
