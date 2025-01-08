@@ -38,6 +38,8 @@ class AgendaFragment : Fragment() {
 
         val binding = FragmentAgendaBinding.bind(view)
 
+
+
         bd.collection("agenda")
             .orderBy("tanggal")
             .get()

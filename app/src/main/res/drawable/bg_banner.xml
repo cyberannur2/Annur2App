@@ -2,8 +2,22 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item>
         <shape android:shape="rectangle">
-            <corners android:radius="20dp" />
+            <corners android:radius="10dp"/>
             <solid android:color="@color/white" />
         </shape>
     </item>
 </selector>
+<!--<layer-list xmlns:android="http://schemas.android.com/apk/res/android">-->
+<!--    <item>-->
+<!--        <shape android:shape="rectangle">-->
+<!--            <corners android:radius="20dp" />-->
+<!--            <solid android:color="@android:color/black" />-->
+<!--        </shape>-->
+<!--    </item>-->
+<!--    <item android:left="1dp" android:right="1dp" android:top="1dp" android:bottom="1dp">-->
+<!--        <shape android:shape="rectangle">-->
+<!--            <corners android:radius="15dp" />-->
+<!--            <solid android:color="@color/white" /> &lt;!&ndash; Shadow color &ndash;&gt;-->
+<!--        </shape>-->
+<!--    </item>-->
+<!--</layer-list>-->

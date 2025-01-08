@@ -11,13 +11,15 @@
         android:layout_width="165dp"
         android:layout_height="230dp"
         android:elevation="2dp"
+        android:layout_marginStart="3dp"
         android:background="@drawable/bg_banner"
+        android:backgroundTint="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/iv_agenda"
-        android:layout_width="163dp"
+        android:layout_width="164dp"
         android:layout_height="148dp"
         android:clickable="true"
         android:elevation="2dp"

@@ -16,6 +16,7 @@ import com.miniawradsantri.awrad.artikel.ListArtikelFragment
 import com.miniawradsantri.awrad.bacaan.BacaanPdf
 import com.miniawradsantri.awrad.bacaan.BacaanTabLayout
 import com.miniawradsantri.awrad.bacaan.BacaanSinglePage
+import com.miniawradsantri.awrad.bacaan.BacaanTabLayoutCounterFragment
 import com.miniawradsantri.awrad.bacaan.DalailFragment
 import com.miniawradsantri.awrad.databinding.FragmentHomeBinding
 import com.miniawradsantri.awrad.databinding.FragmentMenuBacaanBinding
@@ -81,34 +82,36 @@ class HomeFragment : Fragment() {
 
         // Yasin Tahlil
         binding.includeBacaan.icYasinTahlil.setOnClickListener {
-            val bacaanTabLayout = BacaanTabLayout()
+            val bacaanTabLayoutCounterFragment = BacaanTabLayoutCounterFragment()
             val tabTitles = arrayListOf("Yasin", "Tahlil", "Doa Yasin", "Doa Tahlil")
             val bundle = Bundle()
             bundle.putStringArrayList("TAB_TITLES", tabTitles)
-            bacaanTabLayout.arguments = bundle
+            bacaanTabLayoutCounterFragment.arguments = bundle
             fragmentManager.beginTransaction()
+                .setCustomAnimations(R.anim.fade_in, R.anim.fade_out)
                 .replace(
                     R.id.frame_home,
-                    BacaanTabLayout.newInstance(
+                    BacaanTabLayoutCounterFragment.newInstance(
                         getString(R.string.yasin_tahlil),
                         tabTitles
                     )
                 )
+
                 .addToBackStack(null)
                 .commit()
         }
 
         // Al-Waqiah
         binding.includeBacaan.icWaqiah.setOnClickListener {
-            val bacaanTabLayout = BacaanTabLayout()
+            val bacaanTabLayoutCounter = BacaanTabLayoutCounterFragment()
             val tabTitles = arrayListOf("Al-Waqiah", "Doa Waqiah")
             val bundle = Bundle()
             bundle.putStringArrayList("TAB_TITLES", tabTitles)
-            bacaanTabLayout.arguments = bundle
+            bacaanTabLayoutCounter.arguments = bundle
             fragmentManager.beginTransaction()
                 .replace(
                     R.id.frame_home,
-                    BacaanTabLayout.newInstance(
+                    BacaanTabLayoutCounterFragment.newInstance(
                         getString(R.string.al_waqiah),
                         tabTitles
                     )
@@ -133,15 +136,15 @@ class HomeFragment : Fragment() {
 
         // Istighosah
         binding.includeBacaan.icIstighosah.setOnClickListener {
-            val bacaanTabLayout = BacaanTabLayout()
+            val bacaanTabLayoutCounterFragment = BacaanTabLayoutCounterFragment()
             val tabTitles = arrayListOf("Istighosah", "Doa Istighosah")
             val bundle = Bundle()
             bundle.putStringArrayList("TAB_TITLES", tabTitles)
-            bacaanTabLayout.arguments = bundle
+            bacaanTabLayoutCounterFragment.arguments = bundle
             fragmentManager.beginTransaction()
                 .replace(
                     R.id.frame_home,
-                    BacaanTabLayout.newInstance(
+                    BacaanTabLayoutCounterFragment.newInstance(
                         getString(R.string.istighosah),
                         tabTitles
                     )

@@ -62,6 +62,13 @@ class EditTextSize : Fragment() {
                     Log.d("EditTextSize", "Setting text size result: $textSize")
                     setFragmentResult("requestKey", resultBundle)
 
+//                    // Perbarui ukuran teks fragment yang sedang aktif
+//                    val currentPosition = binding.viewPager.currentItem
+//                    val currentFragment = childFragmentManager.findFragmentByTag("f$currentPosition")
+//                    if (currentFragment is ItemTabFragment) {
+//                        currentFragment.updateTextSize(textSize)
+//                    }
+
 
                 }
 

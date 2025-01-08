@@ -42,18 +42,37 @@ class ItemTabFragment : Fragment() {
     ): View {
         // Inflate the layout for this fragment
         binding = FragmentItemTabBinding.inflate(inflater, container, false)
+        val savedTextSize = loadTextSize()
+        binding.textBacaan.setTextSize(TypedValue.COMPLEX_UNIT_SP, savedTextSize.toFloat())
+
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        val savedTextSize = loadTextSize()
+        updateTextSize(savedTextSize)
+
         parentFragmentManager.setFragmentResultListener("requestKey", this) { _, bundle ->
             val newTextSize = bundle.getInt("TEXT_SIZE")
-            binding.textBacaan.setTextSize(TypedValue.COMPLEX_UNIT_SP, newTextSize.toFloat())
+            updateTextSize(newTextSize)
+            saveTextSize(newTextSize)
         }
         binding.textBacaan.text = text
     }
+
+
+    private fun saveTextSize(newTextSize: Int) {
+        val sharedPreferences =
+            requireContext().getSharedPreferences("MyPrefs_TextSize", Context.MODE_PRIVATE)
+        with(sharedPreferences.edit()) {
+            putInt("TEXT_SIZE", newTextSize)
+            apply()
+        }
+    }
+
+
 
     override fun onResume() {
         super.onResume()

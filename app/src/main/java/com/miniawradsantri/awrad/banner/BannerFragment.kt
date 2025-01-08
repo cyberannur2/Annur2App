@@ -43,13 +43,14 @@ class BannerFragment : Fragment() {
         viewPager.offscreenPageLimit = 3
         viewPager.clipToPadding = false
         viewPager.clipChildren = false
+
         viewPager.getChildAt(0).overScrollMode = RecyclerView.OVER_SCROLL_NEVER
 
         val transformer = CompositePageTransformer()
-        transformer.addTransformer(MarginPageTransformer(40))
+//        transformer.addTransformer(MarginPageTransformer(3))
         transformer.addTransformer { page, position ->
             val r = 1 - abs(position)
-            page.scaleY = 0.85f + r * 0.14f
+            page.scaleY = 0.9f + r * 0.1f
         }
 
         viewPager.setPageTransformer(transformer)
